@@ -35,3 +35,13 @@ brew cask install daisydisk
 brew cask install kindle
 brew cask install vlc
 brew cask install musicbrainz-picard
+
+
+# Productivity tools
+brew cask install rescuetime
+brew cask install selfcontrol
+
+brew cask install omnifocus
+brew cask install omniplan
+brew cask install omnioutliner
+brew cask install alfred
