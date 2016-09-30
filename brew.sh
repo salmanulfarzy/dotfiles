@@ -23,7 +23,8 @@ brew tap homebrew/python
 
 # Install GNU core utilities (those coming with macOS are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew install coreutils
+brew install coreutils --with-default-names
+
 
 # Install GNU `find`, `locate, `updatedb`, `x-args`
 # add `$(brew --prefix findutils)/libexec/gnubin` to `$PATH`, Also MANPATH.
