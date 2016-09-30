@@ -18,4 +18,14 @@ brew cask install virtualbox
 # Utilities
 brew cask install android-file-transfer
 brew cask install appcleaner
+brew cask install caffeine
+brew cask install flux
+brew cask install cheatsheet
+brew cask install namechanger
+brew cask install the-unarchiver
+brew cask install ubersicht
+brew cask install djview
+brew cask install ichm
+brew cask install caiibre
 
+brew cask install daisydisk
