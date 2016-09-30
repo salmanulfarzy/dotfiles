@@ -51,3 +51,17 @@ brew cask install alfred
 brew cask install anki
 brew cask install evernote
 brew cask install nvalt
+
+
+# Intenet tools
+brew cask install dropbox 
+brew cask install firefox
+brew cask install franz
+brew cask install google-chrome
+brew cask install google-drive
+brew cask install google-photos-backup
+brew cask install polymail
+brew cask install skype
+brew cask install slack
+brew cask install torbrowser
+brew cask install transmission
