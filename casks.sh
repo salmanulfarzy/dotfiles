@@ -71,3 +71,12 @@ brew cask install transmission
 brew cask install omnigraffle
 brew cask install sketch
 brew cask install balsamiq-mockups
+
+
+# Quicklook Plugins
+brew cask install qlimagesize
+brew cask install quicklook-csv
+brew cask install qlstphen
+brew cask install suspicious-package
+brew cask install qlcolorcode
+brew cask install betterzipql
