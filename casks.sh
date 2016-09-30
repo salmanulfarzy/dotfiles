@@ -65,3 +65,9 @@ brew cask install skype
 brew cask install slack
 brew cask install torbrowser
 brew cask install transmission
+
+
+# Design and Drawing
+brew cask install omnigraffle
+brew cask install sketch
+brew cask install balsamiq-mockups
