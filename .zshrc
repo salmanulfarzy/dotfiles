@@ -20,8 +20,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(z zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
 
 
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/usr/sbin:$PATH
-export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/bin:/usr/sbin:$PATH"
+export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 export EDITOR='vim'
 
 
