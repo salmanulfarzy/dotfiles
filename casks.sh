@@ -45,3 +45,9 @@ brew cask install omnifocus
 brew cask install omniplan
 brew cask install omnioutliner
 brew cask install alfred
+
+
+# Note taking
+brew cask install anki
+brew cask install evernote
+brew cask install nvalt
