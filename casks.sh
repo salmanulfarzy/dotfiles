@@ -29,3 +29,9 @@ brew cask install ichm
 brew cask install caiibre
 
 brew cask install daisydisk
+
+
+# Media
+brew cask install kindle
+brew cask install vlc
+brew cask install musicbrainz-picard
