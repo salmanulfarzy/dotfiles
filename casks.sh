@@ -6,77 +6,78 @@
 
 
 # Dev tools
-brew cask install iterm2
-brew cask install atom
-brew cask install android-studio
-brew cask install rstudio
-brew cask install mactex
-brew cask install sublime-text
-brew cask install virtualbox
+brew cask install iterm2 --verbose
+brew cask install atom --verbose
+brew cask install android-studio --verbose
+brew cask install rstudio --verbose
+brew cask install mactex --verbose
+brew cask install sublime-text --verbose
+brew cask install virtualbox --verbose
+brew cask install vagrant --verbose
 
 
 # Utilities
-brew cask install android-file-transfer
-brew cask install appcleaner
-brew cask install caffeine
-brew cask install flux
-brew cask install cheatsheet
-brew cask install namechanger
-brew cask install the-unarchiver
-brew cask install ubersicht
-brew cask install djview
-brew cask install ichm
-brew cask install caiibre
+brew cask install android-file-transfer --verbose
+brew cask install appcleaner --verbose
+brew cask install caffeine --verbose
+brew cask install flux --verbose
+brew cask install cheatsheet --verbose
+brew cask install namechanger --verbose
+brew cask install the-unarchiver --verbose
+brew cask install ubersicht --verbose
+brew cask install djview --verbose
+brew cask install ichm --verbose
+brew cask install caiibre --verbose
 
-brew cask install daisydisk
+brew cask install daisydisk --verbose
 
 
 # Media
-brew cask install kindle
-brew cask install vlc
-brew cask install musicbrainz-picard
+brew cask install kindle --verbose
+brew cask install vlc --verbose
+brew cask install musicbrainz-picard --verbose
 
 
 # Productivity tools
-brew cask install rescuetime
-brew cask install selfcontrol
+brew cask install rescuetime --verbose
+brew cask install selfcontrol --verbose
 
-brew cask install omnifocus
-brew cask install omniplan
-brew cask install omnioutliner
-brew cask install alfred
+brew cask install omnifocus --verbose
+brew cask install omniplan --verbose
+brew cask install omnioutliner --verbose
+brew cask install alfred --verbose
 
 
 # Note taking
-brew cask install anki
-brew cask install evernote
-brew cask install nvalt
+brew cask install anki --verbose
+brew cask install evernote --verbose
+brew cask install nvalt --verbose
 
 
 # Intenet tools
-brew cask install dropbox 
-brew cask install firefox
-brew cask install franz
-brew cask install google-chrome
-brew cask install google-drive
-brew cask install google-photos-backup
-brew cask install polymail
-brew cask install skype
-brew cask install slack
-brew cask install torbrowser
-brew cask install transmission
+brew cask install dropbox  --verbose
+brew cask install firefox --verbose
+brew cask install franz --verbose
+brew cask install google-chrome --verbose
+brew cask install google-drive --verbose
+brew cask install google-photos-backup --verbose
+brew cask install polymail --verbose
+brew cask install skype --verbose
+brew cask install slack --verbose
+brew cask install torbrowser --verbose
+brew cask install transmission --verbose
 
 
 # Design and Drawing
-brew cask install omnigraffle
-brew cask install sketch
-brew cask install balsamiq-mockups
+brew cask install omnigraffle --verbose
+brew cask install sketch --verbose
+brew cask install balsamiq-mockups --verbose
 
 
 # Quicklook Plugins
-brew cask install qlimagesize
-brew cask install quicklook-csv
-brew cask install qlstphen
-brew cask install suspicious-package
-brew cask install qlcolorcode
-brew cask install betterzipql
+brew cask install qlimagesize --verbose
+brew cask install quicklook-csv --verbose
+brew cask install qlstphen --verbose
+brew cask install suspicious-package --verbose
+brew cask install qlcolorcode --verbose
+brew cask install betterzipql --verbose
