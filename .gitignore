@@ -1,0 +1,14 @@
+# OS X
+.DS_Store
+
+# External disk Files
+.Spotligh-V100
+.Trashes
+
+# Language specifc
+*.pyc
+*.swp
+
+# Thumbnails
+._*
+Thumbs.db
