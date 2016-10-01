@@ -16,6 +16,9 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 
+# zsh options
+setopt HIST_IGNORE_SPACE
+
 # List of plugins
 plugins=(k z zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
 
