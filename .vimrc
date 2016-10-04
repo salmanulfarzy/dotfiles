@@ -139,7 +139,7 @@
     " autocmd FileType asm,c,objc,scheme,sh,python,perl,javascript nn <leader>R :!~/deepThought.sh '%:p'<cr>
 
 
-  " map <F2> :NERDTreeToggle<CR>
+  map <F2> :NERDTreeToggle<CR>
 
   map X dd " single-key delete line
 
@@ -162,7 +162,7 @@
  
   " Plugin 'chriskempson/base16-vim'
   " Plugin 'jeetsukumaran/vim-buffergator'
-  " Plugin 'scrooloose/nerdtree'
+  Plugin 'scrooloose/nerdtree'
   " Plugin 'ctrlpvim/ctrlp.vim'
   " Plugin 'scrooloose/syntastic'
   " Plugin 'tpope/vim-fugitive'
