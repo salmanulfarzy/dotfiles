@@ -37,6 +37,7 @@ brew cask install kindle --verbose
 brew cask install vlc --verbose
 brew cask install musicbrainz-picard --verbose
 brew cask install vox --verbose
+brew cask install mac2imgur --verbose
 
 
 # Productivity tools
