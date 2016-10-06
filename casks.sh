@@ -14,6 +14,7 @@ brew cask install mactex --verbose
 brew cask install sublime-text --verbose
 brew cask install virtualbox --verbose
 brew cask install vagrant --verbose
+brew cask install github-desktop --verbose
 
 
 # Utilities
