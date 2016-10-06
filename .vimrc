@@ -1,7 +1,7 @@
   " Global Settings
 
   set nocompatible  " Not compatible with older vi
-  set history=9999  " History default is 20
+  set history=256   " History default is 20
   set number        " Show line number of left
   set ruler         " Show the column/rwo
   nnoremap ; :      " Remap ; to : always typing shift
@@ -159,13 +159,13 @@
   Plugin 'airblade/vim-gitgutter'
   Plugin 'bling/vim-airline'
   Plugin 'Valloric/YouCompleteMe'
- 
-  " Plugin 'chriskempson/base16-vim'
-  " Plugin 'jeetsukumaran/vim-buffergator'
+  Plugin 'tpope/vim-fugitive'
   Plugin 'scrooloose/nerdtree'
-  " Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'chriskempson/base16-vim'
+  " Plugin 'jeetsukumaran/vim-buffergator'
+   " Plugin 'ctrlpvim/ctrlp.vim'
   " Plugin 'scrooloose/syntastic'
-  " Plugin 'tpope/vim-fugitive'
+  
   " Plugin 'nathanaelkane/vim-indent-guides'
   " Plugin 'easymotion/vim-easymotion'
   " Plugin 'majutsushi/tagbar'
