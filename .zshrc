@@ -20,7 +20,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 setopt HIST_IGNORE_SPACE
 
 # List of plugins
-plugins=(k z zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(k z alias-tips zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
 
 
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/bin:/usr/sbin:$PATH"
