@@ -4,7 +4,7 @@
   set history=256   " History default is 20
   set number        " Show line number of left
   set ruler         " Show the column/rwo
-  nnoremap ; :      " Remap ; to : always typing shift
+
   syntax on         " Enable syntax highlighting
   set guifont=Hack:h11  " GUI font
   set backspace=indent,eol,start   " Allows the backspace to delete indenting, end of lines, and over the start of insert
@@ -21,6 +21,9 @@
   set tabstop=4         " Columns in Editor when tab is hit
   set shiftwidth=4      " Indention on << and >>
 
+
+  " Always rempa ; to :
+  nnoremap ; : 
 
   " Highlight only the lines that go past 80 characters
   highlight ColorColumn ctermbg=green guibg=green
@@ -113,11 +116,13 @@
     nnoremap j gj
     nnoremap k gk
 
+    " Disable arrow keys in normal mode
     nnoremap <buffer>  <up> <nop>
     nnoremap <buffer>  <down> <nop>
     nnoremap <buffer>  <left> <nop>
     nnoremap <buffer>  <right> <nop>
 
+    " Disable arrow keys in insert mode
     inoremap <buffer>  <right> <nop>
     inoremap <buffer>  <left> <nop>
     inoremap <buffer>  <up> <nop>
@@ -139,15 +144,15 @@
     " autocmd FileType asm,c,objc,scheme,sh,python,perl,javascript nn <leader>R :!~/deepThought.sh '%:p'<cr>
 
 
-  map <F2> :NERDTreeToggle<CR>
+    " map <F2> :NERDTreeToggle<CR>
 
-  map X dd " single-key delete line
+    map X dd " single-key delete line
 
-" Jump to last position when re-opening a file
-  if has("autocmd")
-     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-      \| exe "normal! g'\"" | endif
-  endif
+    " Jump to last position when re-opening a file
+    if has("autocmd")
+        au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+                    \| exe "normal! g'\"" | endif
+    endif
 
   " Vundle configuration
 
@@ -155,17 +160,17 @@
   set rtp+=~/.vim/bundle/Vundle.vim " Required
   call vundle#begin()               " Required  
   Plugin 'VundleVim/Vundle.vim'     " Required
-  
+
   Plugin 'airblade/vim-gitgutter'
   Plugin 'bling/vim-airline'
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'tpope/vim-fugitive'
-  Plugin 'scrooloose/nerdtree'
-" Plugin 'chriskempson/base16-vim'
+  " Plugin 'scrooloose/nerdtree'
+  " Plugin 'chriskempson/base16-vim'
   " Plugin 'jeetsukumaran/vim-buffergator'
-   " Plugin 'ctrlpvim/ctrlp.vim'
+  " Plugin 'ctrlpvim/ctrlp.vim'
   " Plugin 'scrooloose/syntastic'
-  
+
   " Plugin 'nathanaelkane/vim-indent-guides'
   " Plugin 'easymotion/vim-easymotion'
   " Plugin 'majutsushi/tagbar'
@@ -197,13 +202,13 @@
 "  let g:indent_guides_default_mapping = 1
 
 " Ctrlp configuration
-  nmap <leader>p :CtrlP
-  let g:ctrlp_cmd = 'CtrlP'
-  let g:ctrlp_working_path_mode = 'ra'
-  let g:ctrlp_custom_ignore = {
-        \ 'dir':  '\v[\/]\.(git|hg|svn)|\_site$',
-        \ 'file': '\v\.(class|jpg|jepg|mp4|avi|iso|gmd|pkg)$',
-        \ }
+" nmap <leader>p :CtrlP
+" let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_working_path_mode = 'ra'
+" let g:ctrlp_custom_ignore = {
+"       \ 'dir':  '\v[\/]\.(git|hg|svn)|\_site$',
+"       \ 'file': '\v\.(class|jpg|jepg|mp4|avi|iso|gmd|pkg)$',
+"       \ }
 
 " YouCompleteMe configuration
   let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
@@ -254,8 +259,8 @@
   " let g:multi_cursor_quit_key = '<Esc>'
 
   " NERDTRee Options
-    let NERDTreeShowHidden=1
-    let NERDTreeMinimalUI=1
+  " let NERDTreeShowHidden=1
+  " let NERDTreeMinimalUI=1
 
   " vim Explorer settings
   " map <F2> :Explore<cr>
