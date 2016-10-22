@@ -1,5 +1,7 @@
-export ZSH=/Users/Salman/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
+source "$HOME/.aliases"
+source "$HOME/.functions"
 
 # BULLET TRAIN options
 BULLETTRAIN_RUBY_SHOW=false
@@ -33,7 +35,4 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
 source /usr/local/bin/virtualenvwrapper.sh
 
-
 source $ZSH/oh-my-zsh.sh
-source "$HOME/.aliases"
-source "$HOME/.functions"
