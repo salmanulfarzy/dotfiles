@@ -16,20 +16,8 @@ alias h="history"
 alias cronlog="cat /var/log/cron.log"
 
 # git aliases
-alias g='git'
 alias ga='git add'
-alias gb='git branch'
 alias gc='git commit -v'
-alias gcl='git clone'
-alias gcmsg='git commit -m'
-alias gco='git checkout'
-alias gd='git diff'
-alias gls='git log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]" --graph --decorate'
-alias gll='git log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]" --graph --decorate --numstat'
-alias glds='git log --pretty=format:"%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn]" --graph --decorate --date=short'
-alias gld='git log --pretty=format:"%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn]" --graph --decorate --date=relative'
-alias gle='git log --oneline --decorate --graph'
-alias gp='git push'
 alias gsb='git status -sb'
 alias gss='git status -s'
 alias gst='git status'
