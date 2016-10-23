@@ -11,10 +11,10 @@
     co = checkout
     diff = diff --word-diff
     dc = diff --cached
-    push = rebase -i @{u}
-    pull = pull --rebase
+    p = rebase -i @{u}
+    pl = pull --rebase
 [apply]
     whitespace = nowarn
 [user]
-    name = Salman
+	name = sfarzy
     email = salmanulfarz@gmail.com
