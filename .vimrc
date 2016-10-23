@@ -123,10 +123,7 @@
   let g:netrw_winsize=20
   let g:netrw_altv=1
   let g:netrw_list_hide=&wildignore
-  augroup ProjectDrawer
-    autocmd!
-    autocmd VimEnter * :Vexplore
-  augroup END
+
 
   " Ctrlp configuration
   nmap <leader>p :CtrlP
