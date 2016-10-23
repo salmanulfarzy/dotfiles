@@ -108,12 +108,25 @@
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'tpope/vim-fugitive'
   Plugin 'ctrlpvim/ctrlp.vim'
+  " Plugin 'scrooloose/nerdtree'
 
   filetype plugin indent on    " Required
   call vundle#end()            " Required 
 
   set background=dark
   colorscheme solarized
+
+  " netrw configuration [File explorer]
+  let g:netrw_banner=0
+  let g:netrw_liststyle=3
+  let g:netrw_browse_split=4
+  let g:netrw_winsize=20
+  let g:netrw_altv=1
+  let g:netrw_list_hide=&wildignore
+  augroup ProjectDrawer
+    autocmd!
+    autocmd VimEnter * :Vexplore
+  augroup END
 
   " Ctrlp configuration
   nmap <leader>p :CtrlP
