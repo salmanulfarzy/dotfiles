@@ -35,7 +35,7 @@
   set writebackup
   set backupdir=~/.vim/backup/
   set directory=~/.vim/swap/  " Specific swap folder
-  let mapleader = ','         " Map leader to ,
+  let mapleader=','         " Map leader to ,
 
   set wildmenu    " Enhanced mode for command line completion
   set wildmode=longest:list,full
@@ -107,7 +107,6 @@
   Plugin 'bling/vim-airline'
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'tpope/vim-fugitive'
-  Plugin 'scrooloose/nerdtree'
   Plugin 'ctrlpvim/ctrlp.vim'
 
   filetype plugin indent on    " Required
@@ -118,24 +117,24 @@
 
   " Ctrlp configuration
   nmap <leader>p :CtrlP
-  let g:ctrlp_cmd = 'CtrlP'
-  let g:ctrlp_working_path_mode = 'ra'
-  let g:ctrlp_custom_ignore = {
+  let g:ctrlp_cmd='CtrlP'
+  let g:ctrlp_working_path_mode='ra'
+  let g:ctrlp_custom_ignore={
               \ 'dir':  '\v[\/]\.(git|hg|svn)|\_site$',
               \ 'file': '\v\.(class|jpg|jepg|mp4|avi|iso|gmd|pkg)$',
               \ }
 
 " YouCompleteMe configuration
-  let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-  let g:ycm_autoclose_preview_window_after_completion = 1
+  let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+  let g:ycm_autoclose_preview_window_after_completion=1
 
 
 " vim-airline configuration
-  let g:airline_powerline_fonts = 1
+  let g:airline_powerline_fonts=1
   let g:airline_section_y='%{strftime("%I:%M")}'
-  let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#branch#enabled = 1
-  let g:airline#extensions#syntastic#enabled = 1
+  let g:airline#extensions#tabline#enabled=1
+  let g:airline#extensions#branch#enabled=1
+  let g:airline#extensions#syntastic#enabled=1
 
 " Show trailing whitespace and tabs obnoxiously
   set list listchars=tab:▸\ ,trail:.
@@ -168,4 +167,4 @@
 
 
   " Disable ridiculous mappings
-  let g:vimrplugin_insert_mode_cmds = 0
+  let g:vimrplugin_insert_mode_cmds=0
