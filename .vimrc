@@ -5,7 +5,7 @@
   set number        " Show line number of left
   set ruler         " Show the column/rwo
 
-  syntax on         " Enable syntax highlighting
+  syntax enable         " Enable syntax highlighting
   set guifont=Hack:h11  " GUI font
   set backspace=indent,eol,start   " Allows the backspace to delete indenting, end of lines, and over the start of insert
   set hidden            " Ignore non-modified buffer on exit
@@ -94,7 +94,12 @@
   " Map Ctrl+C to copy in Visual mode
   vmap <C-C> "+y
 
-  map X dd " single-key delete line
+  " Jump to last cursor position when re-opening a file
+  if has("autocmd")
+      au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  endif
+
+   map X dd " single-key delete line
 
   " Vundle configuration
 
@@ -120,7 +125,7 @@
   let g:netrw_banner=0
   let g:netrw_liststyle=3
   let g:netrw_browse_split=4
-  let g:netrw_winsize=20
+  let g:netrw_winsize=15
   let g:netrw_altv=1
   let g:netrw_list_hide=&wildignore
 
