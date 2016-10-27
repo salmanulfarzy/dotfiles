@@ -13,6 +13,10 @@
     dc = diff --cached
     p = rebase -i @{u}
     pl = pull --rebase
+	ss = status -s
+	st = status
+	cmt = commit -v
+	sb = status -sb
 [apply]
     whitespace = nowarn
 [user]

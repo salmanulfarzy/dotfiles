@@ -16,11 +16,7 @@ alias h="history"
 alias cronlog="cat /var/log/cron.log"
 
 # git aliases
-alias ga='git add'
-alias gc='git commit -v'
-alias gsb='git status -sb'
-alias gss='git status -s'
-alias gst='git status'
+alias git='hub'
 
 # Detect which `ls` version is in use
 if ls --color > /dev/null 2>&1; then #GNU ls
