@@ -20,6 +20,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # zsh options
 setopt HIST_IGNORE_SPACE
+unsetopt correct_all
+unsetopt correct
 
 # List of plugins
 plugins=(k z alias-tips zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
