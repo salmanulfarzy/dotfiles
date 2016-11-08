@@ -13,7 +13,6 @@ alias -- -="cd -"
 
 alias c="clear"
 alias h="history"
-alias history-stat="history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10"
 alias cronlog="cat /var/log/cron.log"
 
 # git aliases
