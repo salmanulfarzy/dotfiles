@@ -149,7 +149,6 @@
   let g:airline_section_y='%{strftime("%I:%M")}'
   let g:airline#extensions#tabline#enabled=1
   let g:airline#extensions#branch#enabled=1
-  let g:airline#extensions#syntastic#enabled=1
 
 " Show trailing whitespace and tabs obnoxiously
   set list listchars=tab:▸\ ,trail:.
