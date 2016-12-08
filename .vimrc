@@ -113,6 +113,7 @@
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'tpope/vim-fugitive'
   Plugin 'ctrlpvim/ctrlp.vim'
+  Plugin 'scrooloose/nerdcommenter'
   " Plugin 'scrooloose/nerdtree'
 
   filetype plugin indent on    " Required
@@ -150,6 +151,10 @@
   let g:airline#extensions#tabline#enabled=1
   let g:airline#extensions#branch#enabled=1
 
+" NERD Commenter configuration
+  let g:NERDSpaceDelims = 1
+  let g:NERDTrimTrailingWhitespace = 1
+
 " Show trailing whitespace and tabs obnoxiously
   set list listchars=tab:▸\ ,trail:.
   set list
@@ -179,6 +184,8 @@
   " Show all open buffers and their status
   nmap <leader>bl :ls<CR>
 
-
   " Disable ridiculous mappings
   let g:vimrplugin_insert_mode_cmds=0
+
+  " Launch Marked2
+  nnoremap <leader>m :silent !open -a Marked\ 2.app '%:p'<cr>
