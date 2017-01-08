@@ -2,7 +2,6 @@
 alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
 
-
 # Easier directory navigation
 alias ..="cd .."
 alias ...="../.."
@@ -10,9 +9,12 @@ alias ....="../../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias pr="cd ~/Projects"
 
 alias c="clear"
-alias h="history"
+alias h="history|tail -10"
 alias cronlog="cat /var/log/cron.log"
 
 # Detect which `ls` version is in use
@@ -57,9 +59,12 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
+# git to hub
+alias git="hub"
+
 # Hide/show all desktop icons (useful when presenting)
-# alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false & killall Finder"
-# alias showdesktop="defaults write com.apple.finder CreateDesktop -bool True & killall Finder"
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false & killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool True & killall Finder"
 
 # URL encode strings
 # alias urlencode='python -c "import sys, urllib asul; print ul.quote_plus(sys.argv[1]);"'
@@ -72,7 +77,7 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 # alias plistbuddy="/usr/libexec/PlistBuddy"
 
 # Lock th screen (when going AFK)
-# alias afk="/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Reload the shell (i.e, invoke as a login shell)
 alias reload="exec $SHELL -l"
