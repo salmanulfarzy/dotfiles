@@ -119,8 +119,9 @@
   filetype plugin indent on    " Required
   call vundle#end()            " Required 
 
-  set background=dark
-  colorscheme solarized
+  " set background=dark
+  " colorscheme solarized
+
 
   " netrw configuration [File explorer]
   let g:netrw_banner=0
