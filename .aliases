@@ -13,6 +13,7 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias pr="cd ~/Projects"
 
+alias rmd="rm -rf"
 alias c="clear"
 alias h="history|tail -10"
 alias cronlog="cat /var/log/cron.log"
@@ -31,10 +32,7 @@ alias la="ls -laF ${colorflag}" # List all files colorized in long format, inclu
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'" # List only directories
 alias ls="command ls ${colorflag}" # Always use color output for `ls`
 
-# Always enable colored `grep` output
 alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
 
 # IP Address
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -74,7 +72,7 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool True & ki
 # alias mergepdf='/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py'
 
 # PlistBuddy alias, because sometimes `defaults` just doesn't cut it
-# alias plistbuddy="/usr/libexec/PlistBuddy"
+alias plistbuddy="/usr/libexec/PlistBuddy"
 
 # Lock th screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
