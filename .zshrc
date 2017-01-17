@@ -1,22 +1,15 @@
 export ZSH=$HOME/.oh-my-zsh
-
 source "$HOME/.aliases"
 source "$HOME/.functions"
 
-# BULLET TRAIN options
-BULLETTRAIN_RUBY_SHOW=false
-BULLETTRAIN_DIR_EXTENDED=1
-BULLETTRAIN_HG_SHOW=false
-BULLETTRAIN_EXEC_TIME_SHOW=true
-BULLETTRAIN_TIME_12HR=true
-
-
 # zsh variables
-ZSH_THEME="bullet-train"
+ZSH_THEME="spaceship"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# space ship theme options
+SPACESHIP_PROMPT_SYMBOL="❯"
 
 # zsh options
 setopt HIST_IGNORE_SPACE
@@ -26,7 +19,7 @@ unsetopt correct
 # List of plugins
 plugins=(k z alias-tips zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
 
-
+fpath=(/usr/local/share/zsh-completions $fpath)
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/bin:/usr/sbin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 export EDITOR='vim'
