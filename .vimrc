@@ -115,6 +115,7 @@
   Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'scrooloose/nerdcommenter'
   " Plugin 'scrooloose/nerdtree'
+  Plugin 'scrooloose/syntastic'
 
   filetype plugin indent on    " Required
   call vundle#end()            " Required 
@@ -155,6 +156,16 @@
 " NERD Commenter configuration
   let g:NERDSpaceDelims = 1
   let g:NERDTrimTrailingWhitespace = 1
+
+  " Syntastic configuration
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list=1
+  let g:syntastic_check_on_open=1
+  let g:syntastic_check_on_on_wq=0
 
 " Show trailing whitespace and tabs obnoxiously
   set list listchars=tab:▸\ ,trail:.
