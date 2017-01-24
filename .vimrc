@@ -110,6 +110,7 @@
 
   Plugin 'airblade/vim-gitgutter'
   Plugin 'bling/vim-airline'
+  Plugin 'vim-airline/vim-airline-themes'
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'tpope/vim-fugitive'
   Plugin 'ctrlpvim/ctrlp.vim'
