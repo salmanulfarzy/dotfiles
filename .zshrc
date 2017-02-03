@@ -10,6 +10,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # space ship theme options
 SPACESHIP_PROMPT_SYMBOL="❯"
+SPACESHIP_TIME_SHOW=true
 
 # zsh options
 setopt HIST_IGNORE_SPACE
@@ -27,8 +28,8 @@ export EDITOR='vim'
 
 # virtualenwrapper settings
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Projects
-source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 source $ZSH/oh-my-zsh.sh
 
