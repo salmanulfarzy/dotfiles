@@ -88,6 +88,9 @@
   inoremap <buffer>  <up> <nop>
   inoremap <buffer>  <down> <nop>
 
+  " Keymap to toggle NERDTree
+  map <F2> :NERDTreeToggle<CR>
+
   " Map Ctrl+V to paste in Insert mode
   imap <C-V> <C-R>*
 
@@ -115,7 +118,7 @@
   Plugin 'tpope/vim-fugitive'
   Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'scrooloose/nerdcommenter'
-  " Plugin 'scrooloose/nerdtree'
+  Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/syntastic'
 
   filetype plugin indent on    " Required
@@ -123,16 +126,6 @@
 
   " set background=dark
   " colorscheme solarized
-
-
-  " netrw configuration [File explorer]
-  " More info at https://shapeshed.com/vim-netrw/
-  let g:netrw_banner=0
-  let g:netrw_liststyle=3
-  let g:netrw_browse_split=3
-  let g:netrw_winsize=15
-  let g:netrw_altv=1
-  let g:netrw_list_hide=&wildignore
 
   " Ctrlp configuration
   nmap <leader>p :CtrlP
@@ -153,6 +146,10 @@
   let g:airline_section_y='%{strftime("%I:%M")}'
   let g:airline#extensions#tabline#enabled=1
   let g:airline#extensions#branch#enabled=1
+
+" NERD Tree configuration
+  let NERDTreeShowHidden=1
+  let NERDTreeMinimalUI=1
 
 " NERD Commenter configuration
   let g:NERDSpaceDelims = 1
