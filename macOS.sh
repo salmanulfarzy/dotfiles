@@ -53,12 +53,12 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001; ok
 
 # Expand save panel by default
 running "always expand save panel"
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true; ok
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true; ok
 
 # Expand print panel by default
 running "always expand print panel"
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true; ok
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true; ok
 
 # Save to disk (not to iCloud) by default
@@ -177,9 +177,9 @@ defaults write com.apple.finder DisableAllAnimations -bool true; ok
 
 # Show icons for hard drives, servers, and removable media on the desktop
 running "Show icons for hard drives, servers, and removable media on the desktop"
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true; ok
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true; ok
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool true; ok
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true; ok
 
 # Finder: show all filename extensions
