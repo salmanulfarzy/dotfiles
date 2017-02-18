@@ -296,13 +296,13 @@ running "automatically hide and show the Dock"
 defaults write com.apple.dock autohide -bool true; ok
 
 # Make Dock icons of hidden applications translucent
-runnig "make Dock icons of hidden applications translucent"
+running "make Dock icons of hidden applications translucent"
 defaults write com.apple.dock showhidden -bool true; ok
 
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
-bot "OK. Note that some of these changes require a logout/restart to take effect. Killing affected applications (so they can reboot)....
+bot "OK. Note that some of these changes require a logout/restart to take effect. Killing affected applications (so they can reboot)...."
 
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
     "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
