@@ -2,7 +2,12 @@ export ZSH=$HOME/.oh-my-zsh
 source "$HOME/.aliases"
 source "$HOME/.functions"
 
+# homebrew options
+HOMEBREW_NO_AUTO_UPDATE="true"
+
 # zsh variables
+unsetopt correct        # disable auto correct
+unsetopt correct_all
 ZSH_THEME="spaceship"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
@@ -11,6 +16,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # space ship theme options
 SPACESHIP_PROMPT_SYMBOL="❯"
 SPACESHIP_TIME_SHOW=true
+SPACESHIP_NVM_SHOW=false
+SPACESHIP_RUBY_SHOW=false
+SPACESHIP_GOLANG_SHOW=false
 
 # zsh options
 setopt HIST_IGNORE_SPACE
