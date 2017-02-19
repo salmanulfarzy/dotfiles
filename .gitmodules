@@ -1,0 +1,3 @@
+[submodule "userscripts"]
+	path = userscripts
+	url = https://github.com/sfarzy/userscripts.git
