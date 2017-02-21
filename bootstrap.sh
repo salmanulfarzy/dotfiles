@@ -99,4 +99,7 @@ bot "installing vim plugins"
 # require cmake
 vim +PluginInstall +qll > /dev/null 2>&1
 
+source ./brews.sh
+source ./casks.sh
+
 bot "Installation complete ~"

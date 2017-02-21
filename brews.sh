@@ -4,16 +4,11 @@
 #
 # This installs command tools using homebrew
 
-if test ! $(which brew) then
-    echo "Installing homebrew..."
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
 # Make sure we're using the latest homebrew
 brew update
 
 # Upgrade any alrady-installed formulae
-brew upgrade --all
+brew upgrade
 
 
 # Tapping brew formulas

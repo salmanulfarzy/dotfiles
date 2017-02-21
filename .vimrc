@@ -21,6 +21,8 @@
   set tabstop=4         " Columns in Editor when tab is hit
   set shiftwidth=4      " Indention on << and >>
 
+  autocmd FileType html setlocal tabstop=2 shiftwidth=2
+  autocmd FileType css setlocal tabstop=2 shiftwidth=2
 
   set ignorecase smartcase  " Ignore case when doing a search as well as highlight it as it is typed
   set hlsearch      " Highlight search terms
@@ -119,7 +121,7 @@
   Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'scrooloose/nerdtree'
-  Plugin 'scrooloose/syntastic'
+  Plugin 'vim-Syntastic/syntastic'
 
   filetype plugin indent on    " Required
   call vundle#end()            " Required 
@@ -131,7 +133,7 @@
   nmap <leader>p :CtrlP
   let g:ctrlp_cmd='CtrlP'
   let g:ctrlp_working_path_mode='ra'
-  let g:ctrlp_custom_ignore={
+  let g:ctrlp_custom_ignore={ 
               \ 'dir':  '\v[\/]\.(git|hg|svn)|\_site$',
               \ 'file': '\v\.(class|jpg|jepg|mp4|avi|iso|gmd|pkg)$',
               \ }
@@ -164,6 +166,8 @@
   let g:syntastic_auto_loc_list=1
   let g:syntastic_check_on_open=1
   let g:syntastic_check_on_on_wq=0
+
+  let g:syntastic_mode_map = { "passive_filetypes": ["html"] }
 
 " Show trailing whitespace and tabs obnoxiously
   set list listchars=tab:▸\ ,trail:.
