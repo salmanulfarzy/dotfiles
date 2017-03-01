@@ -9,6 +9,9 @@
 *.pyc
 *.swp
 
+# PyCharm
+.idea/
+
 # Thumbnails
 ._*
 Thumbs.db
