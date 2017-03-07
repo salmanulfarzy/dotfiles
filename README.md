@@ -1,4 +1,4 @@
-## ~/ Home, Sweet Home.
+## ~, Sweet ~
 
 ![iTerm2 Feb 21, 2017](https://i.imgur.com/Z3GcuLZ.gif)
 
