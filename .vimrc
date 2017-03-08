@@ -6,7 +6,8 @@
   set ruler         " Show the column/rwo
 
   syntax enable         " Enable syntax highlighting
-  set guifont=Hack:h11  " GUI font
+  set guifont=Opeator\ Mono:h11  " GUI font
+
   set backspace=indent,eol,start   " Allows the backspace to delete indenting, end of lines, and over the start of insert
   set hidden            " Ignore non-modified buffer on exit
   set laststatus=2      " Show two lines for status line
