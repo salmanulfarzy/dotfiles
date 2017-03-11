@@ -12,6 +12,9 @@
 # PyCharm
 .idea/
 
+# Git merge backups
+*.orig
+
 # Thumbnails
 ._*
 Thumbs.db
