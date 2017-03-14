@@ -107,6 +107,13 @@
 
    map X dd " single-key delete line
 
+  " Check vim-plug installation
+  if empty(glob('~/.vim/autoload/plug.vim'))
+      silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+      autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  endif
+
   " vim-plug configuration
 
   call plug#begin('~/.vim/bundle')
