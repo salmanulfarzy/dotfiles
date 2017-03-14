@@ -113,14 +113,14 @@
 
   Plug 'airblade/vim-gitgutter'
   Plug 'bling/vim-airline'
-  Plug 'Valloric/YouCompleteMe'
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
   Plug 'tpope/vim-fugitive'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'scrooloose/nerdcommenter'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-  Plug 'vim-Syntastic/syntastic', { 'on': 'SyntasticToggleMode' }
+  " Plug 'vim-Syntastic/syntastic', { 'on': 'SyntasticCheck' }
 
-  call plug#end()            " Required 
+  call plug#end()            " Required
 
   " set background=dark
   " colorscheme solarized
@@ -129,7 +129,7 @@
   nmap <leader>p :CtrlP
   let g:ctrlp_cmd='CtrlP'
   let g:ctrlp_working_path_mode='ra'
-  let g:ctrlp_custom_ignore={ 
+  let g:ctrlp_custom_ignore={
               \ 'dir':  '\v[\/]\.(git|hg|svn)|\_site$',
               \ 'file': '\v\.(class|jpg|jepg|mp4|avi|iso|gmd|pkg)$',
               \ }
@@ -154,14 +154,14 @@
   let g:NERDTrimTrailingWhitespace = 1
 
   " Syntastic configuration
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
+  " set statusline+=%#warningmsg#
+  " set statusline+=%{exists('g:loaded_syntastic_plugin')?SyntasticStatuslineFlag():''}
+  " set statusline+=%*
 
-  let g:syntastic_always_populate_loc_list = 1
-  let g:syntastic_auto_loc_list=1
-  let g:syntastic_check_on_open=1
-  let g:syntastic_check_on_on_wq=0
+  " let g:syntastic_always_populate_loc_list = 1
+  " let g:syntastic_auto_loc_list=1
+  " let g:syntastic_check_on_open=1
+  " let g:syntastic_check_on_on_wq=0
 
   let g:syntastic_mode_map = { "passive_filetypes": ["html"] }
 
