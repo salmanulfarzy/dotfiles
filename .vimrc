@@ -107,25 +107,20 @@
 
    map X dd " single-key delete line
 
-  " Vundle configuration
+  " vim-plug configuration
 
-  filetype off                      " Required
-  set rtp+=~/.vim/bundle/Vundle.vim " Required
-  call vundle#begin()               " Required  
-  Plugin 'VundleVim/Vundle.vim'     " Required
+  call plug#begin('~/.vim/bundle')
 
-  Plugin 'airblade/vim-gitgutter'
-  Plugin 'bling/vim-airline'
-  Plugin 'vim-airline/vim-airline-themes'
-  Plugin 'Valloric/YouCompleteMe'
-  Plugin 'tpope/vim-fugitive'
-  Plugin 'ctrlpvim/ctrlp.vim'
-  Plugin 'scrooloose/nerdcommenter'
-  Plugin 'scrooloose/nerdtree'
-  Plugin 'vim-Syntastic/syntastic'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'bling/vim-airline'
+  Plug 'Valloric/YouCompleteMe'
+  Plug 'tpope/vim-fugitive'
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'vim-Syntastic/syntastic', { 'on': 'SyntasticToggleMode' }
 
-  filetype plugin indent on    " Required
-  call vundle#end()            " Required 
+  call plug#end()            " Required 
 
   " set background=dark
   " colorscheme solarized
