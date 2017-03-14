@@ -8,6 +8,7 @@
 # Language specifc
 *.pyc
 *.swp
+env/
 
 # PyCharm
 .idea/
