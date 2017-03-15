@@ -137,7 +137,7 @@
   let g:ctrlp_cmd='CtrlP'
   let g:ctrlp_working_path_mode='ra'
   let g:ctrlp_custom_ignore={
-              \ 'dir':  '\v[\/]\.(git|hg|svn)|\_site$',
+              \ 'dir':  '\v[\/]\.(git|hg|svn)|env|\_site$',
               \ 'file': '\v\.(class|jpg|jepg|mp4|avi|iso|gmd|pkg)$',
               \ }
 
