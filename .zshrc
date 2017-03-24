@@ -29,12 +29,5 @@ export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/u
 export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 export EDITOR='vim'
 
-
-# virtualenwrapper settings
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-source /usr/local/bin/virtualenvwrapper_lazy.sh
-
 source $ZSH/oh-my-zsh.sh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
