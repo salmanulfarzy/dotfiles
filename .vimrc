@@ -14,7 +14,8 @@
   set display+=lastline       " Always show the last line instead of @ @ @
   set encoding=utf-8          " Enable UTF-8 encoding
 
-  set smartindent       " Insert additional level of indention
+  " set smartindent       " Insert additional level of indention
+  set cindent
   set smarttab          " For TAB use shiftwith on startofline and tabstop elsewhere
   set autoindent        " Apply indention of current line to next line using Enter
   set expandtab         " Expand Tabs into Space
@@ -114,7 +115,7 @@
       autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
   endif
 
-  " vim-plug configuration
+    " vim-plug configuration
 
   call plug#begin('~/.vim/bundle')
 
@@ -125,7 +126,15 @@
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'scrooloose/nerdcommenter'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-  " Plug 'vim-Syntastic/syntastic', { 'on': 'SyntasticCheck' }
+  " Plug 'vim-Syntastic/syntastic', { 'on': [] }
+  "Delay Syntastic load until we aren't diong anything
+   " augroup LazySyntatic
+     " autocmd!
+     " autocmd CursorHold * :call plug#load('syntastic')
+     " autocmd CursorHold * :autocmd! LazySyntatic
+   " augroup END
+
+
 
   call plug#end()            " Required
 
@@ -147,7 +156,7 @@
 
 
 " vim-airline configuration
-  let g:airline_powerline_fonts=1
+  " let g:airline_powerline_fonts=1
   let g:airline_section_y='%{strftime("%I:%M")}'
   let g:airline#extensions#tabline#enabled=1
   let g:airline#extensions#branch#enabled=1
@@ -162,15 +171,13 @@
 
   " Syntastic configuration
   " set statusline+=%#warningmsg#
-  " set statusline+=%{exists('g:loaded_syntastic_plugin')?SyntasticStatuslineFlag():''}
+  " set statusline+=%{SyntasticStatuslineFlag()}
   " set statusline+=%*
 
-  " let g:syntastic_always_populate_loc_list = 1
-  " let g:syntastic_auto_loc_list=1
-  " let g:syntastic_check_on_open=1
-  " let g:syntastic_check_on_on_wq=0
+  " let g:synatastic_auto_loc_list=1
 
-  let g:syntastic_mode_map = { "passive_filetypes": ["html"] }
+  " let g:syntastic_mode_map = { "passive_filetypes": ["html"] }
+  " nnoremap <silent> <F5> :SyntasticCheck<CR>
 
 " Show trailing whitespace and tabs obnoxiously
   set list listchars=tab:▸\ ,trail:.
@@ -193,6 +200,7 @@
   " Buffer navigation
   nmap <leader>j :bnext<CR>
   nmap <leader>h :bprevious<CR>
+  nmap <tab> :b#<cr>
 
   " Close the current buffer and move to the previous one
   " Replicate the idea of closing a tab
