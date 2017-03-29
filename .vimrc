@@ -126,6 +126,7 @@
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'scrooloose/nerdcommenter'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'majutsushi/tagbar'
   " Plug 'vim-Syntastic/syntastic', { 'on': [] }
   "Delay Syntastic load until we aren't diong anything
    " augroup LazySyntatic
@@ -161,6 +162,9 @@
   let g:airline_section_y='%{strftime("%I:%M")}'
   let g:airline#extensions#tabline#enabled=1
   let g:airline#extensions#branch#enabled=1
+
+" Tagbar configuration
+  nmap <F8> :TagbarToggle<CR>
 
 " NERD Tree configuration
   let NERDTreeShowHidden=1
