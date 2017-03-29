@@ -72,6 +72,12 @@
   nmap <leader>s- :split<cr>
   nmap <leader>s? :map <leader>s<cr>
 
+  " Easier split navigation
+  nnoremap <C-J> <C-W><C-J>
+  nnoremap <C-K> <C-W><C-K>
+  nnoremap <C-L> <C-W><C-L>
+  nnoremap <C-H> <C-W><C-H>
+
   " Unhighlight the last search pattern on Enter
   nn <silent> <cr> :nohlsearch<cr><cr>
 
