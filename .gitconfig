@@ -6,6 +6,7 @@
 	pl = pull --rebase
 	p = rebase -i @{u}
 	
+    co = checkout
 	diff = diff --word-diff
 	dc = diff --cached
 
