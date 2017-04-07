@@ -149,7 +149,7 @@
   " colorscheme solarized
 
   " Ctrlp configuration
-  nmap <leader>p :CtrlP
+  nmap <leader>p :CtrlP<CR>
   let g:ctrlp_cmd='CtrlP'
   let g:ctrlp_working_path_mode='ra'
   let g:ctrlp_custom_ignore={
