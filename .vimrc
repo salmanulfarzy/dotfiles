@@ -132,8 +132,6 @@
 
   call plug#end()            " Required
 
-  " set background=dark
-  " colorscheme solarized
 
   " Ctrlp configuration
   nmap <leader>p :CtrlP<CR>
