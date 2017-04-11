@@ -199,6 +199,3 @@
 
   " Disable ridiculous mappings
   let g:vimrplugin_insert_mode_cmds=0
-
-  " Launch Marked2
-  nnoremap <leader>m :silent !open -a Marked\ 2.app '%:p'<cr>
