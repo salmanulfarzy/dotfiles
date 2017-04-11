@@ -62,10 +62,6 @@
 
   nmap Q q
 
-  "  Show only selected in Visual mode
-  nmap <silent> <leader>th :cal ToggleSelected(0)<cr>
-  vmap <silent> <leader>th :cal ToggleSelected(1)<cr>
-
   " Shorcuts to split the window
   nmap <leader>s<bar> :vsplit<cr>
   nmap <leader>s- :split<cr>
@@ -111,7 +107,8 @@
       au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   endif
 
-   map X dd " single-key delete line
+  " single-key delete line
+   map X dd
 
   " Check vim-plug installation
   if empty(glob('~/.vim/autoload/plug.vim'))
