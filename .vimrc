@@ -132,15 +132,6 @@
   Plug 'scrooloose/nerdcommenter'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
   Plug 'majutsushi/tagbar'
-  " Plug 'vim-Syntastic/syntastic', { 'on': [] }
-  "Delay Syntastic load until we aren't diong anything
-   " augroup LazySyntatic
-     " autocmd!
-     " autocmd CursorHold * :call plug#load('syntastic')
-     " autocmd CursorHold * :autocmd! LazySyntatic
-   " augroup END
-
-
 
   call plug#end()            " Required
 
@@ -180,15 +171,6 @@
   let g:NERDSpaceDelims = 1
   let g:NERDTrimTrailingWhitespace = 1
 
-  " Syntastic configuration
-  " set statusline+=%#warningmsg#
-  " set statusline+=%{SyntasticStatuslineFlag()}
-  " set statusline+=%*
-
-  " let g:synatastic_auto_loc_list=1
-
-  " let g:syntastic_mode_map = { "passive_filetypes": ["html"] }
-  " nnoremap <silent> <F5> :SyntasticCheck<CR>
 
 " Show trailing whitespace and tabs obnoxiously
   set list listchars=tab:▸\ ,trail:.
