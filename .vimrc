@@ -175,6 +175,7 @@
 " NERD Tree configuration
   let NERDTreeShowHidden=1
   let NERDTreeMinimalUI=1
+  let NERDTreeIgnore=['\.git[[dir]]', 'env$[[dir]]']
 
 " NERD Commenter configuration
   let g:NERDSpaceDelims = 1
