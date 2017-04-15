@@ -1,7 +1,7 @@
   " Global Settings
 
   set nocompatible  " Not compatible with older vi
-  set history=256   " History default is 20
+  set history=32   " History default is 20
   set number        " Show line number of left
   set ruler         " Show the column/rwo
 
@@ -93,9 +93,6 @@
   inoremap <buffer>  <up> <nop>
   inoremap <buffer>  <down> <nop>
 
-  " Keymap to toggle NERDTree
-  map <F2> :NERDTreeToggle<CR>
-
   " Map Ctrl+V to paste in Insert mode
   imap <C-V> <C-R>*
 
@@ -161,6 +158,8 @@
   let NERDTreeShowHidden=1
   let NERDTreeMinimalUI=1
   let NERDTreeIgnore=['\.git[[dir]]', 'env$[[dir]]']
+" Keymap to toggle NERDTree
+  map <F2> :NERDTreeToggle<CR>
 
 " NERD Commenter configuration
   let g:NERDSpaceDelims = 1
