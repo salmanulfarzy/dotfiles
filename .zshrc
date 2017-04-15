@@ -31,4 +31,4 @@ export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:/usr/loca
 export EDITOR='vim'
 
 source $ZSH/oh-my-zsh.sh
-
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
