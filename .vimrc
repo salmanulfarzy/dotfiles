@@ -22,6 +22,9 @@
   set tabstop=4         " Columns in Editor when tab is hit
   set shiftwidth=4      " Indention on << and >>
 
+  set foldmethod=indent " Enable indent folding
+  set foldlevel=16      " Fold upto 16 level
+
   autocmd FileType html setlocal tabstop=2 shiftwidth=2
   autocmd FileType css setlocal tabstop=2 shiftwidth=2
 
