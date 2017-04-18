@@ -43,6 +43,9 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 alias pip_update=" pip install --upgrade pip && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 alias update='brew update; brew upgrade; brew cleanup; upgrade_oh_my_zsh; npm install npm -g; npm update -g;'
 
+alias open='xdg-open'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
@@ -56,9 +59,6 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
-
-# git to hub
-alias git="hub"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false & killall Finder"
