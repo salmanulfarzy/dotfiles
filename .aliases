@@ -33,49 +33,54 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'" # List only directorie
 alias ls="command ls ${colorflag}" # Always use color output for `ls`
 
 alias grep='grep --color=auto'
+alias pip_update=" pip install --upgrade pip && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
+
+# Reload the shell (i.e, invoke as a login shell)
+alias reload="exec $SHELL -l"
 
 # IP Address
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
-# Clean up LaunchServices to remove duplicates in the “Open With” menu
-alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
-
-alias pip_update=" pip install --upgrade pip && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
-alias update='brew update; brew upgrade; brew cleanup; upgrade_oh_my_zsh; npm install npm -g; npm update -g;'
-
-alias open='xdg-open'
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
-
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
-# Empty the Trash on all mounted volumes and main HDD.
-# Also, clear Apple's System Logs to improve shell startup speed.
-# Finally, clear download history from quarantine, MUST. Apple knows everything
-# More derails on https://mths.be/bum
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
-
-# Show/hide hidden files in Finder
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
-
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false & killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool True & killall Finder"
-
 # URL encode strings
-# alias urlencode='python -c "import sys, urllib asul; print ul.quote_plus(sys.argv[1]);"'
+alias urlencode='python -c "import sys, urllib asul; print ul.quote_plus(sys.argv[1]);"'
 
-# Merge PDF files
-# Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-# alias mergepdf='/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py'
 
-# PlistBuddy alias, because sometimes `defaults` just doesn't cut it
-alias plistbuddy="/usr/libexec/PlistBuddy"
+if [[ "$(uname -s)" == "Darwin" ]]; then
 
-# Lock th screen (when going AFK)
-# alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+    # Clean up LaunchServices to remove duplicates in the “Open With” menu
+    alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
-# Reload the shell (i.e, invoke as a login shell)
-alias reload="exec $SHELL -l"
+    # Update installed CLI packages
+    alias update='brew update; brew upgrade; brew cleanup; upgrade_oh_my_zsh; npm install npm -g; npm update -g;'
+
+    # Recursively delete `.DS_Store` files
+    alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+    # Empty the Trash on all mounted volumes and main HDD.
+    # Also, clear Apple's System Logs to improve shell startup speed.
+    # Finally, clear download history from quarantine, MUST. Apple knows everything
+    # More derails on https://mths.be/bum
+    alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+    # Show/hide hidden files in Finder
+    alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+    alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+    # Hide/show all desktop icons (useful when presenting)
+    alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false & killall Finder"
+    alias showdesktop="defaults write com.apple.finder CreateDesktop -bool True & killall Finder"
+
+    # Merge PDF files
+    # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
+    alias mergepdf='/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py'
+
+    # Lock th screen (when going AFK)
+    alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+    # PlistBuddy alias, because sometimes `defaults` just doesn't cut it
+    alias plistbuddy="/usr/libexec/PlistBuddy"
+else
+    alias open='xdg-open'
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
+fi
