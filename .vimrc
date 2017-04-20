@@ -23,7 +23,8 @@
   set shiftwidth=4      " Indention on << and >>
 
   set foldmethod=indent " Enable indent folding
-  set foldlevel=16      " Fold upto 16 level
+  set foldlevelstart=10 " Open most folds by default
+  set foldnestmax=10    " maximum 10 nested folds
 
   autocmd FileType html setlocal tabstop=2 shiftwidth=2
   autocmd FileType css setlocal tabstop=2 shiftwidth=2
@@ -44,7 +45,6 @@
   let mapleader=','         " Map leader to ,
 
   set wildmenu    " Enhanced mode for command line completion
-  set wildmode=longest:list,full
 
   " Ignore some defaults
   set wildignore+=*.so,*.swp,*.zip
@@ -146,6 +146,7 @@
   let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
   let g:ycm_autoclose_preview_window_after_completion=1
   let g:ycm_python_binary_path='python'
+  map <F4> :YcmCompleter GoTo<CR>
 
 
 " vim-airline configuration
