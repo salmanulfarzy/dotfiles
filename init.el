@@ -1,4 +1,4 @@
-;; -*- mode: elips -*-
+;; -*- mode: elisp -*-
 
 ;; Disable the splash screen (to enable it again, replace t with 0)
 (setq inhibit-splash-screen t)
@@ -8,6 +8,24 @@
 
 ;; Enable visual line mode
 (global-visual-line-mode 1)
+
+;; Always follow and edit the actual file in versioning
+(setq vc-follow-symlinks nil)
+
+;; Configure backup directory and settings
+(defvar --backup-directory (concat user-emacs-directory "backups"))
+(if (not (file-exists-p --backup-directory))
+    (make-directory --backup-directory t))
+(setq backup-directory-alist `(("." . ,--backup-directory)))
+(setq make-backup-files t     ; backup file the first time it's saved
+      backup-by-copying t     ; use copies instead of links for backup
+      version-control t	      ; user version numbers for backup
+      kept-new-versions 6     ; number of newest versions to keep
+      kept-old-versions 2     ; number of old versions to keep
+      delete-old-versions t   ; delete excess backup files silently
+      auto-save-timeout 20    ; idle time before autosave(default=30)
+      auto-save-interval 200  ; keystrokes before autosave(default=300)
+      )
 
 ;;;;org-mode configuration
 ;; Enable org-mode
