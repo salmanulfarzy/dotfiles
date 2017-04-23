@@ -63,6 +63,9 @@
   " Set mouse
   set mouse=a
 
+  set background=dark
+  hi LineNr ctermfg=244 ctermbg=235
+
   nmap Q q
 
   " Shorcuts to split the window
