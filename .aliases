@@ -17,6 +17,7 @@ alias rmd="rm -rf"
 alias c="clear"
 alias h="history|tail -10"
 alias cronlog="cat /var/log/cron.log"
+alias tj="touch ~/Dropbox/journal/$(date +%d-%m-%Y).org && emacs ~/Dropbox/journal/$(date +%d-%m-%Y).org &"
 
 # Detect which `ls` version is in use
 if ls --color > /dev/null 2>&1; then #GNU ls
