@@ -31,4 +31,6 @@ export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:/usr/loca
 export EDITOR='vim'
 
 source $ZSH/oh-my-zsh.sh
-[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
