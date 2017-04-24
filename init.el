@@ -45,7 +45,7 @@
 ;; The above is the default in recent emacs
 
 (setq org-todo-keywords
-      '((sequence "TODO" "IN-PROGRESS" "|"  "DONE" "CANCELED")))
+      '((sequence "TODO" "IN-PROGRESS" "DEFERRED" "|"  "DONE" "CANCELED")))
 (setq org-agenda-files '("~/Dropbox/org/" "~/Dropbox/journal"))
 
 (define-key global-map "\C-ca" 'org-agenda)
