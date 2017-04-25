@@ -95,10 +95,6 @@ popd > /dev/null 2>&1
 
 bot "installing vim plugins"
 
-# cmake is required to compile vim bundle YouCompleteMe
-# require cmake
-vim +PluginInstall +qll > /dev/null 2>&1
-
 source ./brews.sh
 source ./casks.sh
 
