@@ -42,10 +42,6 @@ alias reload="exec $SHELL -l"
 # IP Address
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
-# URL encode strings
-alias urlencode='python -c "import sys, urllib asul; print ul.quote_plus(sys.argv[1]);"'
-
-
 if [[ "$(uname -s)" == "Darwin" ]]; then
 
     # Clean up LaunchServices to remove duplicates in the “Open With” menu
