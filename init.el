@@ -50,7 +50,15 @@
 
 (define-key global-map "\C-ca" 'org-agenda)
 (define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-cc" 'org-capture)
 (setq org-log-done t)
+
+;; Org Capture
+(setq org-capture-templates
+      '(("t" "Todo" entry
+	 (file+headline "~/Dropbox/org/gtd.org" "Tasks")
+	 "** TODO %^{Task}\n %?\n %i\nSCHEDULED: %t"
+	 )))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
