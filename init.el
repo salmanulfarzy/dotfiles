@@ -36,6 +36,12 @@
 ;; Load theme
 (load-theme 'base16-tomorrow-night t)
 
+;; Enable org-journal
+(require 'org-journal)
+(setq org-journal-dir "~/Dropbox/journal")
+(setq org-journal-file-format "%Y-%m-%d.org")
+(setq org-journal-date-format "%A, %d %B %Y")
+
 ;;;;org-mode configuration
 ;; Enable org-mode
 (require 'org)
@@ -68,7 +74,7 @@
  '(custom-safe-themes
    (quote
     ("3380a2766cf0590d50d6366c5a91e976bdc3c413df963a0ab9952314b4577299" default)))
- '(package-selected-packages (quote (base16-theme)))
+ '(package-selected-packages (quote (org-journal base16-theme)))
  '(tool-bar-mode nil))
 
 (custom-set-faces
