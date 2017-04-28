@@ -62,6 +62,21 @@
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-log-done t)
 
+
+(defvar org-journal-dir "~/Dropbox/journal")
+
+(defun get-journal-file-today()
+  "Return filename for today's journal entry."
+  (let ((daily-name (format-time-string "%Y-%m-%d")))
+    (expand-file-name (contact-org-journal-dir dairy-name))))
+
+(defun journal-file-today()
+  "Create and load a journal file based on today's date"
+  (interactive)
+  (find-file (get-journal-file-today)))
+
+(global-set-key (kbd "C-c f j") 'journal-file-today)
+
 ;; Org Capture
 (setq org-capture-templates
       '(("t" "Todo" entry
