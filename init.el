@@ -39,12 +39,6 @@
 ;; Load theme
 (load-theme 'base16-tomorrow-night t)
 
-;; Enable org-journal
-(require 'org-journal)
-(setq org-journal-dir "~/Dropbox/journal")
-(setq org-journal-file-format "%Y-%m-%d.org")
-(setq org-journal-date-format "%A, %d %B %Y")
-
 ;;;;org-mode configuration
 ;; Enable org-mode
 (require 'org)
@@ -62,13 +56,15 @@
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-log-done t)
 
-
-(defvar org-journal-dir "~/Dropbox/journal")
+;; Enable org-journal
+(require 'org-journal)
+(setq org-journal-dir "~/Dropbox/journal")
+(setq org-journal-file-format "%Y-%m-%d.org")
+(setq org-journal-date-format "%A, %d %B %Y")
 
 (defun get-journal-file-today()
-  "Return filename for today's journal entry."
-  (let ((daily-name (format-time-string "%Y-%m-%d")))
-    (expand-file-name (contact-org-journal-dir dairy-name))))
+    (let ((daily-name (format-time-string "%Y-%m-%d")))
+    (expand-file-name (concat org-journal-dir daily-name))))
 
 (defun journal-file-today()
   "Create and load a journal file based on today's date"
@@ -81,8 +77,11 @@
 (setq org-capture-templates
       '(("t" "Todo" entry
 	 (file+headline "~/Dropbox/org/gtd.org" "Tasks")
-	 "** TODO %^{Task}\n %?\n %i\nSCHEDULED: %t"
-	 )))
+	 "** TODO %^{Task}\n %?\n %i\nSCHEDULED: %t")
+	("j" "Journal Entry" entry
+	 (file (get-journal-file-today))
+	 "* %<%H:%M> %?\n")))
+	
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
