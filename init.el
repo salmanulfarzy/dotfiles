@@ -12,6 +12,9 @@
 ;; Always follow and edit the actual file in versioning
 (setq vc-follow-symlinks nil)
 
+;; Highlight brackets if visible, else entire expression
+(setq show-paren-style 'mixed)
+
 ;; Configure backup directory and settings
 (defvar --backup-directory (concat user-emacs-directory "backups"))
 (if (not (file-exists-p --backup-directory))
