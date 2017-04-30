@@ -22,8 +22,10 @@ setopt HIST_IGNORE_SPACE
 unsetopt correct_all
 unsetopt correct
 
+export NVM_LAZY_LOAD=true
+
 # List of plugins
-plugins=(k z alias-tips zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(k z alias-tips zsh-nvm zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(~/.zsh/completions $fpath)
