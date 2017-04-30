@@ -17,6 +17,7 @@
 [user]
     email = salmanulfarzy@gmail.com
     name = Salmanul Farzy
+    signingkey = 83CE707DA1CDC9D2
 [push]
     default = simple
 [status]
