@@ -26,6 +26,8 @@ unsetopt correct
 plugins=(k z alias-tips zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(~/.zsh/completions $fpath)
+
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/bin:/usr/sbin:$HOME/.local/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 export EDITOR='vim'
