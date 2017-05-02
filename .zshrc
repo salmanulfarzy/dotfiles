@@ -30,9 +30,9 @@ fpath=(~/.zsh/completions $fpath)
 
 export GOPATH="$HOME/.go"
 
-export PATH="$HOME/.go/bin:$PATH"
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/bin:/usr/sbin:$HOME/.local/bin:$PATH"
-export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+export PATH="$HOME/.go/bin:$HOME/.local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/usr/sbin:$PATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 export EDITOR='vim'
 
