@@ -28,8 +28,12 @@ plugins=(k z alias-tips zsh-history-substring-search zsh-syntax-highlighting zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(~/.zsh/completions $fpath)
 
+export GOPATH="$HOME/.go"
+
+export PATH="$HOME/.go/bin:$PATH"
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/bin:/usr/sbin:$HOME/.local/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+
 export EDITOR='vim'
 
 source $ZSH/oh-my-zsh.sh
