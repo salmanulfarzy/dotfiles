@@ -58,13 +58,13 @@
 
 ;; Enable org-journal
 (require 'org-journal)
-(setq org-journal-dir "~/Dropbox/journal")
+(setq org-journal-dir "~/Dropbox/journal/")
 (setq org-journal-file-format "%Y-%m-%d.org")
 (setq org-journal-date-format "%A, %d %B %Y")
 
 (defun get-journal-file-today()
     (let ((daily-name (format-time-string "%Y-%m-%d")))
-    (expand-file-name (concat org-journal-dir daily-name))))
+    (expand-file-name (concat org-journal-dir daily-name ".org"))))
 
 (defun journal-file-today()
   "Create and load a journal file based on today's date"
@@ -80,7 +80,7 @@
 	 "** TODO %^{Task}\n %?\n %i\nSCHEDULED: %t")
 	("j" "Journal Entry" entry
 	 (file (get-journal-file-today))
-	 "* %<%H:%M> %?\n")))
+	 "** %<%H:%M> %?\n")))
 	
 
 (custom-set-variables
