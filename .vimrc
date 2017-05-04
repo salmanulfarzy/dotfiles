@@ -132,6 +132,7 @@
   Plug 'scrooloose/nerdcommenter'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
   Plug 'majutsushi/tagbar'
+  Plug 'editorconfig/editorconfig-vim'
 
   call plug#end()            " Required
 
