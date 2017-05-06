@@ -18,6 +18,13 @@ setopt HIST_IGNORE_SPACE
 unsetopt correct_all
 unsetopt correct
 
+export EDITOR='vim'
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects/repos
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
+
 export NVM_LAZY_LOAD=true
 export GOPATH="$HOME/.go"
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
