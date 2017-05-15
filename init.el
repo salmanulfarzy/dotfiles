@@ -11,6 +11,7 @@
 
 ;; Always follow and edit the actual file in versioning
 (setq vc-follow-symlinks nil)
+(setq read-file-name-completion-ignore-case t)
 
 ;; Highlight brackets if visible, else entire expression
 (setq show-paren-style 'mixed)
