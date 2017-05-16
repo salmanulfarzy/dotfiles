@@ -82,7 +82,9 @@
 	("j" "Journal Entry" entry
 	 (file (get-journal-file-today))
 	 "** %<%H:%M> %?\n")))
-	
+
+;; Magit
+(global-set-key (kbd "C-x g") 'magit-status)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -92,7 +94,7 @@
  '(custom-safe-themes
    (quote
     ("3380a2766cf0590d50d6366c5a91e976bdc3c413df963a0ab9952314b4577299" default)))
- '(package-selected-packages (quote (org-journal base16-theme)))
+ '(package-selected-packages (quote (magit org-journal base16-theme)))
  '(tool-bar-mode nil))
 
 (custom-set-faces
