@@ -5,7 +5,7 @@
 .Spotligh-V100
 .Trashes
 
-# Language specifc
+# python
 *.pyc
 *.swp
 *env/
@@ -13,6 +13,10 @@
 
 # PyCharm
 .idea/
+
+# ruby
+Gemfile.lock
+*bundle/
 
 # Git merge backups
 *.orig
