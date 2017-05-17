@@ -82,6 +82,9 @@
 	("j" "Journal Entry" entry
 	 (file (get-journal-file-today))
 	 "** %<%H:%M> %?\n")))
+;; Org-bullets
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 ;; Magit
 (global-set-key (kbd "C-x g") 'magit-status)
