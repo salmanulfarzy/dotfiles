@@ -92,6 +92,10 @@
 (setq git-commit-summary-max-length 50)
 (setq git-commit-fill-column 72)
 
+;; Dashboard
+(require 'dashboard)
+(dashboard-setup-startup-hook)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
