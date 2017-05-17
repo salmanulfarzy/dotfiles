@@ -87,7 +87,10 @@
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 ;; Magit
+(require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
+(setq git-commit-summary-max-length 50)
+(setq git-commit-fill-column 72)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
