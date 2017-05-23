@@ -96,6 +96,14 @@
 (require 'dashboard)
 (dashboard-setup-startup-hook)
 
+
+;; Undo tree
+(require 'undo-tree)
+(global-undo-tree-mode 1)
+(global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "C-S-z") 'undo-tree-redo)
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
