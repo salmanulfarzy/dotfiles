@@ -7,7 +7,6 @@
     p = rebase -i @{u}
 
     co = checkout
-    diff = diff --word-diff
     dc = diff --cached
 
     adog = log --all --decorate --oneline --graph
