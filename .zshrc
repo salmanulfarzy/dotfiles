@@ -3,7 +3,7 @@ source "$HOME/.aliases"
 source "$HOME/.functions"
 
 # homebrew options
-HOMEBREW_NO_AUTO_UPDATE="true"
+HOMEBREW_NO_AUTO_UPDATE=1
 
 # zsh variables
 unsetopt correct        # disable auto correct
