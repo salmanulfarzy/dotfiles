@@ -20,7 +20,7 @@ unsetopt correct
 export EDITOR='vim'
 
 ZSH_THEME="spaceship"
-SPACESHIP_NODE_SYMBOL="⬢ "
+SPACESHIP_PROMPT_ORDER=(user host dir git venv exec_time line_sep char)
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects/repos
@@ -44,6 +44,3 @@ export PATH="/usr/local/bin:/usr/bin:/usr/sbin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-
-
-source "/home/sfarzy/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
