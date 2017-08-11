@@ -18,6 +18,10 @@
 Gemfile.lock
 *bundle/
 
+#javascript
+package-lock.json
+node_modules/
+
 # Git merge backups
 *.orig
 
