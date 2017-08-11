@@ -19,28 +19,29 @@ unsetopt correct
 
 export EDITOR='vim'
 
-ZSH_THEME="spaceship"
-SPACESHIP_PROMPT_ORDER=(user host dir git venv exec_time line_sep char)
-
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects/repos
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-# export GOPATH="$HOME/.go"
-# [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # List of plugins
 plugins=(k z alias-tips zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(~/.zsh/completions $fpath)
+fpath=($HOME/.zfunctions $fpath)
 
-export PATH="$HOME/.go/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/bin:/usr/bin:/usr/sbin:$PATH"
+export PATH="$HOME/.miniconda3/bin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+autoload -U promptinit; promptinit
+prompt spaceship
+
+SPACESHIP_PROMPT_ORDER=(user host dir git node venv exec_time line_sep char)
