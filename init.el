@@ -1,3 +1,4 @@
+
 ;; -*- mode: elisp -*-
 
 ;; Disable the splash screen (to enable it again, replace t with 0)
@@ -37,8 +38,6 @@
 	     '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-;; Load theme
-(load-theme 'base16-tomorrow-night t)
 
 ;;;;org-mode configuration
 ;; Enable org-mode
@@ -56,6 +55,9 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-log-done t)
+
+;; Export to markdown
+(require 'ox-md nil t)
 
 ;; Enable org-journal
 (require 'org-journal)
@@ -82,6 +84,7 @@
 	("j" "Journal Entry" entry
 	 (file (get-journal-file-today))
 	 "** %<%H:%M> %?\n")))
+
 ;; Org-bullets
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
@@ -112,6 +115,9 @@
  '(custom-safe-themes
    (quote
     ("3380a2766cf0590d50d6366c5a91e976bdc3c413df963a0ab9952314b4577299" default)))
+ '(org-agenda-files
+   (quote
+    ("/Users/Salman/Dropbox/journal/2017-04-23.org" "/Users/Salman/Dropbox/journal/2017-04-24.org" "/Users/Salman/Dropbox/journal/2017-04-25.org" "/Users/Salman/Dropbox/journal/2017-04-27.org" "/Users/Salman/Dropbox/journal/2017-04-28.org" "/Users/Salman/Dropbox/journal/2017-05-01.org" "/Users/Salman/Dropbox/journal/2017-05-04.org" "/Users/Salman/Dropbox/journal/2017-05-14.org" "/Users/Salman/Dropbox/journal/2017-05-15.org" "/Users/Salman/Dropbox/journal/2017-05-16.org" "/Users/Salman/Dropbox/journal/2017-05-17.org" "/Users/Salman/Dropbox/journal/2017-05-20.org")))
  '(package-selected-packages (quote (magit org-journal base16-theme)))
  '(tool-bar-mode nil))
 
