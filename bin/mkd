@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Create new directory and switch
+#
+
+mkdir -p "$@" && cd "$_";
+
