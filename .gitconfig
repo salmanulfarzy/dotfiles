@@ -2,6 +2,7 @@
     ss = status -s
     sb = status -b
     cmt = commit -v
+    cmsg = commit -m
 
     pl = pull --rebase
     p = rebase -i @{u}
