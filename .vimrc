@@ -1,8 +1,9 @@
   " Global Settings
 
   set nocompatible  " Not compatible with older vi
-  set history=32   " History default is 20
+  set history=32    " History default is 20
   set number        " Show line number of left
+  set relativenumber " Show relative line number
   set ruler         " Show the column/rwo
 
   syntax enable         " Enable syntax highlighting
