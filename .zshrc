@@ -42,4 +42,4 @@ source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt spaceship
 
-SPACESHIP_PROMPT_ORDER=(user host dir git node venv exec_time line_sep char)
+SPACESHIP_PROMPT_ORDER=(user host dir git venv exec_time line_sep char)
