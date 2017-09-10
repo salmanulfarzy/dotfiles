@@ -166,7 +166,8 @@
 " NERD Tree configuration
   let NERDTreeShowHidden=1
   let NERDTreeMinimalUI=1
-  let NERDTreeIgnore=['\.git[[dir]]', 'env$[[dir]]']
+  let NERDTreeIgnore=['\.git[[dir]]', 'env$[[dir]]', '__pycache__[[dir]]']
+  let NERDTreeRespectWildIgnore=1
 " Keymap to toggle NERDTree
   map <F2> :NERDTreeToggle<CR>
 
