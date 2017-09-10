@@ -42,4 +42,7 @@ source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt spaceship
 
-SPACESHIP_PROMPT_ORDER=(user host dir git venv exec_time line_sep char)
+SPACESHIP_BATTERY_THRESHOLD=20
+SPACESHIP_BATTERY_PREFIX="🔋 "
+
+SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv battery exec_time line_sep char)
