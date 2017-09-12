@@ -14,5 +14,18 @@ fi
 source "$HOME/.aliases"
 source "$HOME/.functions"
 
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects/repos
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(~/.zsh/completions $fpath)
+fpath=($HOME/.zfunctions $fpath)
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/usr/sbin:$PATH"
+export MANPATH="/usr/local/man:$MANPATH"
+
 export HISTFILE="$HOME/.zsh_history"
 
