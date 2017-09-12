@@ -132,6 +132,7 @@
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'scrooloose/nerdcommenter'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'tpope/vim-surround'
   Plug 'majutsushi/tagbar'
   Plug 'editorconfig/editorconfig-vim'
 
@@ -166,7 +167,8 @@
 " NERD Tree configuration
   let NERDTreeShowHidden=1
   let NERDTreeMinimalUI=1
-  let NERDTreeIgnore=['\.git[[dir]]', 'env$[[dir]]']
+  let NERDTreeIgnore=['\.git[[dir]]', 'env$[[dir]]', '__pycache__[[dir]]']
+  let NERDTreeRespectWildIgnore=1
 " Keymap to toggle NERDTree
   map <F2> :NERDTreeToggle<CR>
 
