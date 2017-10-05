@@ -128,7 +128,6 @@
   Plug 'airblade/vim-gitgutter'
   Plug 'bling/vim-airline'
   Plug 'Valloric/YouCompleteMe'
-  Plug 'tpope/vim-fugitive'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'scrooloose/nerdcommenter'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
