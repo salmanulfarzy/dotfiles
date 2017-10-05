@@ -29,11 +29,6 @@ else #macOS ls
     export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
 
-alias l="ls -lF ${colorflag}" # List all files colorized in long format
-alias la="ls -laF ${colorflag}" # List all files colorized in long format, including dot files
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'" # List only directories
-alias ls="command ls ${colorflag}" # Always use color output for `ls`
-
 alias grep='grep --color=auto'
 alias pip_update=" pip install --upgrade pip && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 
