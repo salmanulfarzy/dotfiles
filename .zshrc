@@ -30,3 +30,5 @@ export MANPATH="/usr/local/man:$MANPATH"
 export HISTFILE="$HOME/.zsh_history"
 
 [[ -f "${HOME}/.iterm2_shell_integration.zsh" ]] && source "${HOME}/.iterm2_shell_integration.zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
