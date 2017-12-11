@@ -69,6 +69,10 @@
 
   nmap Q q
 
+  " Natural positions for splits
+  set splitbelow
+  set splitright
+
   " Shorcuts to split the window
   nmap <leader>s<bar> :vsplit<cr>
   nmap <leader>s- :split<cr>
