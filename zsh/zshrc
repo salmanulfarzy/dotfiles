@@ -1,9 +1,6 @@
 #
 # Executes commands at the start of an interactive session.
 #
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -24,4 +21,3 @@ SPACESHIP_DIR_TRUNC_REPO=false
 SPACESHIP_GIT_BRANCH_PREFIX=" "
 
 SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv ruby node exec_time line_sep char)
-
