@@ -15,4 +15,11 @@ source "$HOME/.aliases"
 source "$HOME/.functions"
 
 export HISTFILE="$HOME/.zsh_history"
+autoload -U promptinit; promptinit
+prompt spaceship
+
+SPACESHIP_DIR_TRUNC_REPO=false
+SPACESHIP_GIT_BRANCH_PREFIX=" "
+
+SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv ruby node exec_time line_sep char)
 
