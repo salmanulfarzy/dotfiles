@@ -65,7 +65,7 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
 
     # Merge PDF files
     # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-    alias mergepdf='/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py'
+    alias mergepdf="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py"
 
     # Lock th screen (when going AFK)
     alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
