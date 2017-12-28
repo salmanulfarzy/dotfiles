@@ -1,7 +1,3 @@
-#
-# Sets Prezto options.
-#
-
 # Set case-sensitivity for completion, history lookup, etc.
 # zstyle ':prezto:*:*' case-sensitive 'yes'
 
@@ -57,7 +53,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 # Allow the zsh prompt context to be shown.
-#zstyle ':prezto:module:editor' ps-context 'yes'
+ zstyle ':prezto:module:editor' ps-context 'yes'
 
 #
 # Git
@@ -94,13 +90,6 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 # zstyle ':prezto:module:osx:man' dash-keyword 'manpages'
 
 #
-# Pacman
-#
-
-# Set the Pacman frontend.
-# zstyle ':prezto:module:pacman' frontend 'yaourt'
-
-#
 # Prompt
 #
 
@@ -123,16 +112,6 @@ zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 
 # Automatically initialize virtualenvwrapper if pre-requisites are met.
 zstyle ':prezto:module:python:virtualenv' initialize 'yes'
-
-#
-# Screen
-#
-
-# Auto start a session when Zsh is launched in a local terminal.
-# zstyle ':prezto:module:screen:auto-start' local 'yes'
-
-# Auto start a session when Zsh is launched in a SSH connection.
-# zstyle ':prezto:module:screen:auto-start' remote 'yes'
 
 #
 # SSH

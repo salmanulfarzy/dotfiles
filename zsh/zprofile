@@ -2,25 +2,13 @@
 # Executes commands at login pre-zshrc.
 #
 
-#
-# Browser
-#
-
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
 
-#
-# Editors
-#
-
 export PAGER='less'
 export EDITOR='vim'
 export VISUAL='vim'
-
-#
-# Language
-#
 
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
@@ -30,27 +18,14 @@ if [[ -z "$LC_ALL" ]]; then
     export LC_ALL='en_us.UTF-8'
 fi
 
-#
-# Paths
-#
-
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
-
-# Set the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
 
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
   $path
 )
-
-#
-# Less
-#
 
 # Set the default Less options.
 export LESS='-g -i -M -R -S -w -z-4'
