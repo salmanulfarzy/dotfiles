@@ -1,0 +1,8 @@
+#! /bin/sh
+#
+# Search process by name and highlight it
+#
+#
+
+ps axuf | grep -v grep  | grep "$@" -i --color=auto;
+
