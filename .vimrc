@@ -69,6 +69,10 @@
 
   nmap Q q
 
+  " Natural positions for splits
+  set splitbelow
+  set splitright
+
   " Shorcuts to split the window
   nmap <leader>s<bar> :vsplit<cr>
   nmap <leader>s- :split<cr>
@@ -128,10 +132,12 @@
   Plug 'airblade/vim-gitgutter'
   Plug 'bling/vim-airline'
   Plug 'Valloric/YouCompleteMe'
-  Plug 'tpope/vim-fugitive'
-  Plug 'ctrlpvim/ctrlp.vim'
+  " Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
   Plug 'scrooloose/nerdcommenter'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'tpope/vim-surround'
   Plug 'majutsushi/tagbar'
   Plug 'editorconfig/editorconfig-vim'
 
@@ -139,13 +145,17 @@
 
 
   " Ctrlp configuration
-  nmap <leader>p :CtrlP<CR>
-  let g:ctrlp_cmd='CtrlP'
-  let g:ctrlp_working_path_mode='ra'
-  let g:ctrlp_custom_ignore={
-              \ 'dir':  '\v[\/]\.(git|hg|svn)|env|\_site$',
-              \ 'file': '\v\.(class|jpg|jepg|mp4|avi|iso|gmd|pkg)$',
-              \ }
+  " nmap <leader>p :CtrlP<CR>
+  " let g:ctrlp_cmd='CtrlP
+  " let g:ctrlp_working_path_mode='ra'
+  " let g:ctrlp_custom_ignore={
+              " \ 'dir':  '\v[\/]\.(git|hg|svn)|env|node_modules|\_site$',
+              " \ 'file': '\v\.(class|jpg|jepg|mp4|avi|iso|gmd|pkg)$',
+              " \ }
+
+" fzf configuration
+  nmap ; :Buffers<CR>
+  nmap <leader>p :Files<CR>
 
 " YouCompleteMe configuration
   let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'

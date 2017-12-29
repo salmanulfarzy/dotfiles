@@ -8,6 +8,8 @@
 # python
 *.pyc
 *.swp
+Pipfile.lock
+.env
 *env/
 .coverage
 
@@ -29,3 +31,6 @@ node_modules/
 ._*
 Thumbs.db
 *.pem
+
+# Databases
+db.sqlite3

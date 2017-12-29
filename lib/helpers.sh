@@ -4,6 +4,20 @@
 # Colorized helper functions
 #########################
 
+# If we have tput, let's set colors
+if [[ ! -z $(which tput 2> /dev/null) ]]; then
+  reset=$(tput sgr0)
+  bold=$(tput bold)
+  red=$(tput setaf 1)
+  green=$(tput setaf 2)
+  yellow=$(tput setaf 3)
+  blue=$(tput setaf 4)
+fi
+
+paint() {
+  local color=$1 rest=${@:2}
+  echo "$color$rest$reset"
+}
 
 ## Colors
 ESC_SEQ="\x1b["
