@@ -17,6 +17,7 @@ export PIPENV_VENV_IN_PROJECT=true
 autoload -U promptinit; promptinit
 prompt spaceship
 
+SPACESHIP_CHAR_SYMBOL='൧ '
 SPACESHIP_DIR_TRUNC_REPO=false
 SPACESHIP_GIT_BRANCH_PREFIX=" "
 
