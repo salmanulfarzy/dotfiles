@@ -19,10 +19,12 @@
 [user]
     email = salmanulfarzy@gmail.com
     name = Salmanul Farzy
-    signingkey = 83CE707DA1CDC9D2
+    signingkey = 7325421E81414002
 [push]
     default = simple
 [status]
     showUntrackedFiles = all
 [core]
     excludesfile = ~/.gitignore
+[commit]
+    gpgsign = true
