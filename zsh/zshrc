@@ -18,7 +18,5 @@ autoload -U promptinit; promptinit
 prompt spaceship
 
 SPACESHIP_CHAR_SYMBOL='൧ '
-SPACESHIP_DIR_TRUNC_REPO=false
-SPACESHIP_GIT_BRANCH_PREFIX=" "
 
 SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv ruby node exec_time line_sep char)
