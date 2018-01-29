@@ -148,6 +148,7 @@
   Plug 'scrooloose/nerdcommenter'
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-fugitive'
   Plug 'majutsushi/tagbar'
   Plug 'editorconfig/editorconfig-vim'
 
