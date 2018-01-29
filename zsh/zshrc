@@ -19,4 +19,4 @@ prompt spaceship
 
 SPACESHIP_CHAR_SYMBOL='൧ '
 
-SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv ruby node exec_time line_sep char)
+SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv ruby package node exec_time line_sep char)
