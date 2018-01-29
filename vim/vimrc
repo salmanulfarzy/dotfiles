@@ -141,7 +141,7 @@
   call plug#begin('~/.vim/bundle')
 
   Plug 'airblade/vim-gitgutter'
-  Plug 'bling/vim-airline'
+  Plug 'vim-airline/vim-airline'
   Plug 'Valloric/YouCompleteMe'
   " Plug 'ctrlpvim/ctrlp.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -176,7 +176,7 @@
 
 
 " vim-airline configuration
-  " let g:airline_powerline_fonts=1
+  let g:airline_powerline_fonts=1
   let g:airline_section_y='%{strftime("%I:%M")}'
   let g:airline#extensions#tabline#enabled=1
   let g:airline#extensions#branch#enabled=1
