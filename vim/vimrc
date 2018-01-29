@@ -143,7 +143,6 @@
   Plug 'airblade/vim-gitgutter'
   Plug 'vim-airline/vim-airline'
   Plug 'Valloric/YouCompleteMe'
-  " Plug 'ctrlpvim/ctrlp.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'scrooloose/nerdcommenter'
@@ -166,7 +165,7 @@
 
 " fzf configuration
   nmap ; :Buffers<CR>
-  nmap <leader>p :Files<CR>
+  nmap <leader>p :GFiles<CR>
 
 " YouCompleteMe configuration
   let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
@@ -187,7 +186,7 @@
 " NERD Tree configuration
   let NERDTreeShowHidden=1
   let NERDTreeMinimalUI=1
-  let NERDTreeIgnore=['\.git[[dir]]', 'env$[[dir]]', '__pycache__[[dir]]']
+  let NERDTreeIgnore=['\.git[[dir]]', 'env$[[dir]]', '__pycache__[[dir]]', 'node_modules[[dir]]']
   let NERDTreeRespectWildIgnore=1
 " Keymap to toggle NERDTree
   map <F2> :NERDTreeToggle<CR>
