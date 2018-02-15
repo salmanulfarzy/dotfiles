@@ -17,6 +17,11 @@ export PIPENV_VENV_IN_PROJECT=true
 autoload -U promptinit; promptinit
 prompt spaceship
 
-SPACESHIP_CHAR_SYMBOL='൧ '
+SPACESHIP_CHAR_SYMBOL='❯ '
+SPACESHIP_CHAR_COLOR_SUCCESS='magenta'
+SPACESHIP_CHAR_COLOR_FAILURE='red'
 
-SPACESHIP_PROMPT_ORDER=(user host dir git venv pyenv ruby package node exec_time line_sep char)
+SPACESHIP_PACKAGE_SYMBOL=''
+SPACESHIP_DIR_LOCK_SYMBOL=''
+
+SPACESHIP_PROMPT_ORDER=(user host dir git venv ruby package node exec_time line_sep char)
