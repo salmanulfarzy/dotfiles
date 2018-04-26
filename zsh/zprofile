@@ -10,13 +10,8 @@ export PAGER='less'
 export EDITOR='vim'
 export VISUAL='vim'
 
-if [[ -z "$LANG" ]]; then
-  export LANG='en_US.UTF-8'
-fi
-
-if [[ -z "$LC_ALL" ]]; then
-    export LC_ALL='en_us.UTF-8'
-fi
+export LANG='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
@@ -28,7 +23,7 @@ path=(
 )
 
 # Set the default Less options.
-export LESS='-g -i -M -R -S -w -z-4'
+export LESS='-g -i -M -R -w -z-4'
 
 # Set the Less input preprocessor.
 # Try both `lesspipe` and `lesspipe.sh` as either might exist on a system.
