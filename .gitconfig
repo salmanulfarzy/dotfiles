@@ -22,13 +22,17 @@
     email = salmanulfarzy@gmail.com
     name = Salmanul Farzy
     signingkey = 7325421E81414002
+    signingkey = 83CE707DA1CDC9D2
 [push]
     default = simple
 [status]
     showUntrackedFiles = all
 [core]
+    pager = less -+F -+X
     excludesfile = ~/.gitignore
 [commit]
     gpgsign = true
 [pager]
     branch = false
+[mergetool]
+    keepBackup = true
