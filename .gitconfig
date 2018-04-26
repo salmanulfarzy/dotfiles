@@ -36,3 +36,7 @@
     branch = false
 [mergetool]
     keepBackup = true
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = blue
