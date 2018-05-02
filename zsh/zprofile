@@ -20,6 +20,7 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /usr/local/{bin,sbin}
   $path
+  $HOME/.local/bin
 )
 
 # Set the default Less options.
