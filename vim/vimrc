@@ -154,16 +154,6 @@
 
   call plug#end()            " Required
 
-
-  " Ctrlp configuration
-  " nmap <leader>p :CtrlP<CR>
-  " let g:ctrlp_cmd='CtrlP
-  " let g:ctrlp_working_path_mode='ra'
-  " let g:ctrlp_custom_ignore={
-              " \ 'dir':  '\v[\/]\.(git|hg|svn)|env|node_modules|\_site$',
-              " \ 'file': '\v\.(class|jpg|jepg|mp4|avi|iso|gmd|pkg)$',
-              " \ }
-
 " fzf configuration
   nmap ; :Buffers<CR>
   nmap <leader>p :GFiles<CR>
@@ -195,22 +185,6 @@
 " NERD Commenter configuration
   let g:NERDSpaceDelims = 1
   let g:NERDTrimTrailingWhitespace = 1
-
-
-" Show trailing whitespace and tabs obnoxiously
-  set list listchars=tab:▸\ ,trail:.
-  set list
-
-  fun! ToggleWhitespace()
-    ToggleBadWhitespace
-    if &list
-      set nolist
-    else
-      set list listchars=tab:▸\ ,trail:.
-      set list
-    endif
-  endfun
-
 
   " To open a new empty buffer
   nmap <leader>t :enew<CR>
