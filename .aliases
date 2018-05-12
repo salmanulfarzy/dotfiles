@@ -1,6 +1,6 @@
 # Quick edit `rc` files
 alias zshrc="vim ~/.zshrc"
-alias vimrc="vim ~/.vimrc"
+alias vimrc="vim ~/.vim/vimrc"
 
 # Easier directory navigation
 alias ..="cd .."
