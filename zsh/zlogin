@@ -20,4 +20,4 @@ if (( $+commands[fortune] )); then
 fi
 
 # Load ssh via keychain
-eval $(command keychain -q --eval id_rsa)
+# eval $(command keychain -q --eval id_rsa)
