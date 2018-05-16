@@ -151,6 +151,8 @@
   Plug 'tpope/vim-fugitive'
   Plug 'majutsushi/tagbar'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
 
   call plug#end()            " Required
 
@@ -185,6 +187,9 @@
 " NERD Commenter configuration
   let g:NERDSpaceDelims = 1
   let g:NERDTrimTrailingWhitespace = 1
+
+" JSX syntax highglight configuration
+  let g:jsx_ext_required = 0
 
   " To open a new empty buffer
   nmap <leader>t :enew<CR>
