@@ -10,6 +10,7 @@
 
     co = checkout
     dc = diff --cached
+    cp = cherry-pick
 
     dog = log --decorate --oneline --graph
     adog = log --all --decorate --oneline --graph
