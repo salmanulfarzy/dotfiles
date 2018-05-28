@@ -1,3 +1,6 @@
 [submodule "userscripts"]
 	path = userscripts
 	url = https://github.com/sfarzy/userscripts.git
+[submodule "prezto"]
+	path = prezto
+	url = git://github.com/salmanulfarzy/prezto.git
