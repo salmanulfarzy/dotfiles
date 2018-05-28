@@ -4,3 +4,6 @@
 [submodule "prezto"]
 	path = prezto
 	url = git://github.com/salmanulfarzy/prezto.git
+[submodule "plugins"]
+	path = plugins
+	url = git://github.com/salmanulfarzy/plugins.git
