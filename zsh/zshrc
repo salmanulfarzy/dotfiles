@@ -14,14 +14,17 @@ source "$HOME/.functions"
 export HISTFILE="$HOME/.zsh_history"
 export PIPENV_VENV_IN_PROJECT=true
 
+export WORKON_HOME=$HOME/.virtualenvs
+
 autoload -U promptinit; promptinit
 prompt spaceship
 
-SPACESHIP_CHAR_SYMBOL='❯ '
 SPACESHIP_CHAR_COLOR_SUCCESS='magenta'
 SPACESHIP_CHAR_COLOR_FAILURE='red'
 
 SPACESHIP_PACKAGE_SYMBOL=''
 SPACESHIP_DIR_LOCK_SYMBOL=''
 
-SPACESHIP_PROMPT_ORDER=(user host dir git venv package node exec_time line_sep vi_mode char)
+SPACESHIP_PROMPT_ORDER=(user host dir git venv package node exec_time line_sep vi_mode jobs char)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
