@@ -21,6 +21,7 @@ path=(
   /usr/local/{bin,sbin}
   $path
   $HOME/.local/bin
+  $HOME/.cargo/bin
 )
 
 # Set the default Less options.
