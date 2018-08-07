@@ -7,19 +7,16 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
 source "$HOME/.aliases"
 source "$HOME/.functions"
 
 export HISTFILE="$HOME/.zsh_history"
 export PIPENV_VENV_IN_PROJECT=true
-
 export WORKON_HOME=$HOME/.virtualenvs
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-autoload -U promptinit; promptinit
-prompt spaceship
 
+source "$HOME/repos/spaceship-prompt/spaceship.zsh"
 SPACESHIP_CHAR_COLOR_SUCCESS='magenta'
 SPACESHIP_CHAR_COLOR_FAILURE='red'
 
