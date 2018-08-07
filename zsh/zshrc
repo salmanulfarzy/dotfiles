@@ -15,6 +15,7 @@ export HISTFILE="$HOME/.zsh_history"
 export PIPENV_VENV_IN_PROJECT=true
 
 export WORKON_HOME=$HOME/.virtualenvs
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 autoload -U promptinit; promptinit
 prompt spaceship
