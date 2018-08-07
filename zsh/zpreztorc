@@ -5,14 +5,16 @@ zstyle ':prezto:*:*' color 'yes'
 # The order matters.
 zstyle ':prezto:load' pmodule \
   'environment' \
-  'terminal' \
-  'editor' \
-  'history' \
+  'archive' \
+  'command-not-found' \
   'directory' \
+  'editor' \
+  'fasd' \
+  'history' \
   'spectrum' \
+  'terminal' \
   'utility' \
   'completion' \
-  'fasd' \
   'syntax-highlighting' \
   'history-substring-search' \
   'autosuggestions' \
@@ -32,8 +34,10 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 # Set syntax pattern styles.
 zstyle ':prezto:module:syntax-highlighting' pattern \
   'rm*-rf*' 'fg=white,bold,bg=red'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 # Enabled safe options. This aliases cp, ln, mv and rm so that they prompt
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
 zstyle ':prezto:module:utility' safe-ops 'yes'
+zstyle ':prezto:module:utility:ls' color 'no'
