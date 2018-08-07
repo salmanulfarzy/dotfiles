@@ -6,6 +6,7 @@
 #
 #
 
+local paths=(${PWD/#$HOME/\~}) 'cur_dir'
 paths=(${(s:/:)PWD})
 cur_path='/'
 cur_short_path='/'
