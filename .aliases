@@ -18,6 +18,8 @@ alias c="clear"
 alias h="history|tail -10"
 alias cronlog="cat /var/log/cron.log"
 alias tj="touch ~/Dropbox/journal/$(date +%Y-%m-%d).org && emacs ~/Dropbox/journal/$(date +%Y-%m-%d).org &"
+alias sub="filebot -get-subtitles"
+alias subliminal="subliminal download -l en"
 
 eval "$(hub alias -s)"
 
