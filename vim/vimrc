@@ -1,42 +1,42 @@
   " Global Settings
 
-  set nocompatible  " Not compatible with older vi
-  set history=32    " History default is 20
-  set number        " Show line number of left
-  set relativenumber " Show relative line number
-  set ruler         " Show the column/rwo
+  set nocompatible               " Not compatible with older vi
+  set history=32                 " History default is 20
+  set number                     " Show line number of left
+  set relativenumber             " Show relative line number
+  set ruler                      " Show the column/rwo
 
-  syntax enable         " Enable syntax highlighting
+  syntax enable                  " Enable syntax highlighting
 
-  set backspace=indent,eol,start   " Allows the backspace to delete indenting, end of lines, and over the start of insert
-  set hidden            " Ignore non-modified buffer on exit
-  set laststatus=2      " Show two lines for status line
-  set display+=lastline       " Always show the last line instead of @ @ @
-  set encoding=utf-8          " Enable UTF-8 encoding
+  set backspace=indent,eol,start " Allows the backspace to delete indenting, end of lines, and over the start of insert
+  set hidden                     " Ignore non-modified buffer on exit
+  set laststatus=2               " Show two lines for status line
+  set display+=lastline          " Always show the last line instead of @ @ @
+  set encoding=utf-8             " Enable UTF-8 encoding
 
-  " set smartindent       " Insert additional level of indention
+                                 " set smartindent       " Insert additional level of indention
   set cindent
-  set smarttab          " For TAB use shiftwith on startofline and tabstop elsewhere
-  set autoindent        " Apply indention of current line to next line using Enter
-  set expandtab         " Expand Tabs into Space
-  set pastetoggle=<F3>  " Indent bulk paste
-  set tabstop=4         " Columns in Editor when tab is hit
-  set shiftwidth=4      " Indention on << and >>
+  set smarttab                   " For TAB use shiftwith on startofline and tabstop elsewhere
+  set autoindent                 " Apply indention of current line to next line using Enter
+  set expandtab                  " Expand Tabs into Space
+  set pastetoggle=<F3>           " Indent bulk paste
+  set tabstop=4                  " Columns in Editor when tab is hit
+  set shiftwidth=4               " Indention on << and >>
 
-  set foldmethod=indent " Enable indent folding
-  set foldlevelstart=10 " Open most folds by default
-  set foldnestmax=10    " maximum 10 nested folds
+  set foldmethod=indent          " Enable indent folding
+  set foldlevelstart=10          " Open most folds by default
+  set foldnestmax=10             " maximum 10 nested folds
 
   autocmd FileType html setlocal tabstop=2 shiftwidth=2
   autocmd FileType css setlocal tabstop=2 shiftwidth=2
 
-  set ignorecase smartcase  " Ignore case when doing a search as well as highlight it as it is typed
-  set hlsearch      " Highlight search terms
-  set incsearch     " Show search matches as type
-  set showmatch     " Show the matching when doing a search
+  set ignorecase smartcase " Ignore case when doing a search as well as highlight it as it is typed
+  set hlsearch             " Highlight search terms
+  set incsearch            " Show search matches as type
+  set showmatch            " Show the matching when doing a search
 
-  set shortmess=I   " Don't show the startup message
-  set showcmd     " Show the current command at the bottom
+  set shortmess=I          " Don't show the startup message
+  set showcmd              " Show the current command at the bottom
 
   " Store backup to .vim/backup
   set backup
@@ -189,6 +189,9 @@
   let g:NERDSpaceDelims = 1
   let g:NERDTrimTrailingWhitespace = 1
 
+" EasyAlign configuration
+  xmap ga <Plug>(EasyAlign)
+  nmap ga <Plug>(EasyAlign)
 
   " To open a new empty buffer
   nmap <leader>t :enew<CR>
