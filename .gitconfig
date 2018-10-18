@@ -1,40 +1,45 @@
 [alias]
-    s    = status -sb
-    cmt  = commit -v
-    cmsg = commit -m
+  s    = status -sb
+  cmt  = commit -v
+  cmsg = commit -m
 
-    pl = pull --rebase
-    p = rebase -i @{u}
+  pl = pull --rebase
+  p  = rebase -i @{u}
 
-    co = checkout
-    dc = diff --cached
-    cp = cherry-pick
+  co = checkout
+  dc = diff --cached
+  cp = cherry-pick
 
-    dog     = log --decorate --oneline --graph
-    adog    = log --all --decorate --oneline --graph
-    filelog = log -u
+  dog     = log --decorate --oneline --graph
+  adog    = log --all --decorate --oneline --graph
+  filelog = log -u
 
-    la = "!git config -l | grep alias | cut -c 7-"
+  la = "!git config -l | grep alias | cut -c 7-"
 [user]
-    email = salmanulfarzy@gmail.com
-    name = Salmanul Farzy
-    signingkey = 7325421E81414002
-    signingkey = 83CE707DA1CDC9D2
-    signingkey = 6C326B61B424A736
+  email      = salmanulfarzy@gmail.com
+  name       = Salmanul Farzy
+  signingkey = 7325421E81414002
+  signingkey = 83CE707DA1CDC9D2
+  signingkey = 6C326B61B424A736
 [push]
-    default = simple
+  default = simple
 [status]
-    showUntrackedFiles = all
+  showUntrackedFiles = all
 [core]
-    pager = less -+F -+X
-    excludesfile = ~/.gitignore
+  autocrlf     = input
+  excludesfile = ~/.gitignore
 [commit]
-    gpgsign = true
+  gpgsign = true
+  cleanup = strip
 [pager]
-    branch = false
+  branch = false
 [mergetool]
-    keepBackup = true
+  keepBackup = true
+[color "branch"]
+  curent = green reverse
+  local  = green
+  remote = yellow
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = blue
+  added     = yellow
+  changed   = green
+  untracked = blue
