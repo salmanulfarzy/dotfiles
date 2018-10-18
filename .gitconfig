@@ -1,8 +1,6 @@
 [alias]
-    s  = status -sb
-    ss = status -s
-    sb = status -b
-    cmt = commit -v
+    s    = status -sb
+    cmt  = commit -v
     cmsg = commit -m
 
     pl = pull --rebase
@@ -12,10 +10,8 @@
     dc = diff --cached
     cp = cherry-pick
 
-    dog = log --decorate --oneline --graph
-    adog = log --all --decorate --oneline --graph
-    ls = log --pretty='format:%C(yellow)%h %Cred%d %Creset%s %Cblue[%cn]'
-    ldn = log --pretty='format:%C(yellow)%h %Creset%<(50,trunc)%s %Cgreen%<(10,trunc)%ad %Cblue%an  %Cred%d' --date=relative
+    dog     = log --decorate --oneline --graph
+    adog    = log --all --decorate --oneline --graph
     filelog = log -u
 
     la = "!git config -l | grep alias | cut -c 7-"
