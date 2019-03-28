@@ -1,0 +1,23 @@
+@-moz-document url("about:home") {  
+    body {
+        background-color: #181818 !important;
+    }
+    div.title{
+    	color: #757575 !important;
+    }
+}
+
+@-moz-document url("about:newtab") {
+	body {
+        background-color: #181818 !important;
+    }
+    div.title{
+    	color: #757575 !important;
+    }
+}
+
+@-moz-document url("about:blank") {
+	body {
+        background-color: #181818 !important;
+    }
+}
