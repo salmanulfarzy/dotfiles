@@ -11,7 +11,6 @@ source "$HOME/.aliases"
 source "$HOME/.functions"
 
 export HISTFILE="$HOME/.zsh_history"
-export PIPENV_VENV_IN_PROJECT=true
 export WORKON_HOME=$HOME/.virtualenvs
 export HOMEBREW_NO_AUTO_UPDATE=1
 
@@ -19,10 +18,12 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 source "$HOME/repos/spaceship-prompt/spaceship.zsh"
 SPACESHIP_CHAR_COLOR_SUCCESS='magenta'
 SPACESHIP_CHAR_COLOR_FAILURE='red'
+SPACESHIP_TIME_SHOW=true
 
 SPACESHIP_PACKAGE_SYMBOL=''
 SPACESHIP_DIR_LOCK_SYMBOL=''
 
-SPACESHIP_PROMPT_ORDER=(user host dir git venv package node exec_time line_sep vi_mode jobs char)
+SPACESHIP_PROMPT_ORDER=(user host dir git venv python node package docker kubecontext exec_time line_sep vi_mode jobs char)
+SPACESHIP_RPROMPT_ORDER=(time)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
