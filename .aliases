@@ -3,23 +3,15 @@ alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vim/vimrc"
 
 # Easier directory navigation
-alias ..="cd .."
-alias ...="../.."
-alias ....="../../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias pr="cd ~/Projects"
-
+alias vim="nvim"
 alias rmd="rm -rf"
-alias c="clear"
 alias h="history|tail -10"
 alias cronlog="cat /var/log/cron.log"
 alias tj="touch ~/Dropbox/journal/$(date +%Y-%m-%d).org && emacs ~/Dropbox/journal/$(date +%Y-%m-%d).org &"
 alias sub="filebot -get-subtitles"
-alias subliminal="subliminal download -l en"
 
 eval "$(hub alias -s)"
 
@@ -33,7 +25,6 @@ else #macOS ls
 fi
 
 alias grep='grep --color=auto'
-alias pip_update=" pip install --upgrade pip && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 
 # Reload the shell (i.e, invoke as a login shell)
 alias reload="exec $SHELL -l"
@@ -75,8 +66,4 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
 
     # PlistBuddy alias, because sometimes `defaults` just doesn't cut it
     alias plistbuddy="/usr/libexec/PlistBuddy"
-else
-    alias open='xdg-open'
-    alias pbcopy='xclip -selection clipboard'
-    alias pbpaste='xclip -selection clipboard -o'
 fi
