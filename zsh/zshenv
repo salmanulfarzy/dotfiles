@@ -16,6 +16,11 @@ export LC_ALL='en_US.UTF-8'
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
+fpath=(
+  $fpath
+  $HOME/.zfunctions
+)
+
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
@@ -23,6 +28,8 @@ path=(
   $HOME/.local/bin
   $HOME/.cargo/bin
   $HOME/go/bin
+  $HOME/.pyenv/bin
+  $HOME/.yarn/bin
 )
 
 # Set the default Less options.
