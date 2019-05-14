@@ -159,6 +159,9 @@ let mapleader=","
 """" Write buffer
 nnoremap <Leader>w :w<CR>
 
+"""" Fix spelling mistake
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u`
+
 """" Split windows
 nnoremap <leader>s<bar> :vsplit<cr>
 nnoremap <leader>s- :split<cr>
@@ -358,8 +361,8 @@ let delimitMate_balance_matchpairs = 1
 """" Deoplete
 let g:deoplete#enable_at_startup = 1
 
-inoremap <silent><expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <silent><expr><s-TAB> pumvisible() ? "\<c-p>" : "\<s-TAB>"
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><s-TAB> pumvisible() ? "\<c-p>" : "\<s-TAB>"
 
 call deoplete#custom#source('_', 'min_pattern_length', 1)
 call deoplete#custom#source('around', 'rank', 100)
