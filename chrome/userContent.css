@@ -1,23 +1,41 @@
-@-moz-document url("about:home") {  
-    body {
-        background-color: #181818 !important;
-    }
-    div.title{
-    	color: #757575 !important;
-    }
+@-moz-document url("about:home") {
+  body {
+    background-color: #181818 !important;
+  }
+  div.title {
+    color: #757575 !important;
+  }
+  div.card-details {
+    background-color: #313131 !important;
+  }
+  div.card-text {
+    color: #f1f3f5 !important;
+  }
+  div.card-context {
+    display: none !important;
+  }
 }
 
 @-moz-document url("about:newtab") {
-	body {
-        background-color: #181818 !important;
-    }
-    div.title{
-    	color: #757575 !important;
-    }
+  body {
+    background-color: #181818 !important;
+  }
+  div.title {
+    color: #757575 !important;
+  }
+  div.card-details {
+    background-color: #313131 !important;
+  }
+  div.card-text {
+    color: #f1f3f5 !important;
+  }
+  div.card-context {
+    display: none !important;
+  }
 }
 
 @-moz-document url("about:blank") {
-	body {
-        background-color: #181818 !important;
-    }
+  body {
+    background-color: #181818 !important;
+  }
 }
