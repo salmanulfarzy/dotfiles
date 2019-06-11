@@ -35,7 +35,7 @@
 }
 
 @-moz-document url("about:blank") {
-  body {
+  *:empty:not([id]):not([style]) {
     background-color: #181818 !important;
   }
 }
