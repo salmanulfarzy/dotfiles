@@ -11,6 +11,11 @@ hide_edge_borders both
 set $mod Mod4
 floating_modifier $mod
 
+exec_always --no-startup-id "pgrep -x redshift || (redshift &)"
+exec_always --no-startup-id ~/.dropbox-dist/dropboxd &
+exec_always --no-startup-id "pgrep -x copyq || (copy &)"
+exec_always --no-startip-id unclutter &
+
 for_window    [class="^.*"]               border pixel 0
 for_window    [class=".*"]                sticky enable
 for_window    [window_role="pop-up"]      floating enable
@@ -148,11 +153,6 @@ mode "$mode_power" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-exec_always --no-startup-id "pgrep -x redshift || (redshift &)"
-exec_always --no-startup-id ~/.dropbox-dist/dropboxd &
-exec_always --no-startup-id "pgrep -x copyq || (copy &)"
-exec_always --no-startip-id unclutter &
 
 set $color_normal_white  #a89984
 set $color_bright_white  #ebdbb2
