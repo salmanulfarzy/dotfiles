@@ -8,7 +8,6 @@
 # python
 *.pyc
 *.swp
-Pipfile.lock
 .env
 *env/
 .coverage
