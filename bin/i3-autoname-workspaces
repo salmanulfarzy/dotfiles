@@ -8,8 +8,12 @@ import sys
 import i3ipc
 
 WINDOW_ICONS = {
+    "navigator": "",
     "kitty":   "󰀀",
-    "Firefox": "",
+    "sublime_text": "",
+    "spotify": "",
+    "evolution": "",
+    "telegram": "",
     "copyq":   "",
     "rofi":    "󰀋",
     "vlc":     "",
