@@ -1,0 +1,54 @@
+# vi: ft=sh
+
+general {
+  colors = true
+  color_good = '#ebdbb2'
+  color_degraded = '#fabd2f'
+  color_bad = '#fb4934'
+  interval = 1
+}
+
+order += "diskdata"
+order += "net_rate"
+order += "volume_status"
+order += "external_script date"
+order += "clock"
+
+net_rate {
+  format = '\?color=down ↓ {down}'
+  format_value = '{value:.0f} {unit}'
+  # thresholds = [(0, 'bad'), (100, 'degraded'), (300, 'good')]
+  hide_if_zero = True
+  unit 'KB/s'
+}
+
+volume_status {
+  format = '󰀃 {percentage}%'
+  format_muted = '󰀂  0%'
+  thresholds = [(0, 'bad'), (1, 'good'), (101, 'degraded')]
+  on_udev_sound = 'refresh'
+}
+
+diskdata {
+  format = '\?color=free 󰀇  {free} GB'
+  thresholds = {'free': [(0, 'bad'), (2, 'degraded'), (5, 'hidden')]}
+}
+
+external_script date {
+  cache_timeout = 60
+  script_path = 'date +"%a, %d %b"'
+  format = '󰀛    {output}'
+  on_click 1 = 'exec gsimplecal'
+}
+
+clock {
+  format = '{Asia/Kolkata}'
+  format_time = '%H:%M:%S   '
+}
+
+external_script date {
+  cache_timeout = 60
+  script_path = 'date +"%a, %d %b"'
+  format = '󰀛    {output}'
+  on_click 1 = 'exec gsimplecal'
+}

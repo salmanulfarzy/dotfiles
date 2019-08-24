@@ -1,0 +1,165 @@
+font pango: Taskbar  9
+
+gaps inner 2
+smart_gaps          on
+focus_follows_mouse no
+
+new_window pixel 1
+new_float pixel 1
+hide_edge_borders both
+
+set $mod Mod4
+floating_modifier $mod
+
+for_window    [class="^.*"]               border pixel 0
+for_window    [class=".*"]                sticky enable
+for_window    [window_role="pop-up"]      floating enable
+for_window    [class="gsimplecal"]        floating enable
+for_window    [class="copyq"]             floating enable
+for_window    [class="flameshot"]         floating enable
+for_window    [class="Peek"]              floating enable
+for_window    [class="Rofi"]              floating enable
+for_window    [class="TorLauncher"]       floating enable
+
+for_window [class="Firefox"]     move container to $workspace1
+for_window [class="Evolution"]   move container to $workspace3
+for_window [class="qBittorrent"] move container to $workspace0
+for_window [class="TorLauncher"] move container to $workspace0
+
+bindsym $mod+Shift+space    floating toggle
+bindsym $mod+space          focus mode_toggle
+
+bindsym $mod+h    split h
+bindsym $mod+v    split v
+bindsym $mod+f    fullscreen toggle
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+Shift+q    kill
+bindsym $mod+Return     exec kitty
+bindsym $mod+m          exec "flameshot gui"
+bindsym $mod+`          exec "copyq toggle"
+
+bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+a exec "pgrep -x rofi && killall rofi || rofi -normal-window -show drun"
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left       focus left
+bindsym $mod+Down       focus down
+bindsym $mod+Up         focus up
+bindsym $mod+Right      focus right
+
+bindsym $mod+Shift+Left       move left
+bindsym $mod+Shift+Down       move down
+bindsym $mod+Shift+Up         move up
+bindsym $mod+Shift+Right      move right
+
+# Pulse Audio controls
+bindsym XF86AudioMute        exec py3-cmd click 1 volume_status
+bindsym XF86AudioRaiseVolume exec py3-cmd click 4 volume_status
+bindsym XF86AudioLowerVolume exec py3-cmd click 5 volume_status
+
+set $workspace1 workspace number 1
+set $workspace2 workspace number 2
+set $workspace3 workspace number 3
+set $workspace4 workspace number 4
+set $workspace5 workspace number 5
+set $workspace6 workspace number 6
+set $workspace7 workspace number 7
+set $workspace8 workspace number 8
+set $workspace9 workspace number 9
+set $workspace0 workspace number 10
+
+# switch to workspace
+bindsym $mod+1 $workspace1
+bindsym $mod+2 $workspace2
+bindsym $mod+3 $workspace3
+bindsym $mod+4 $workspace4
+bindsym $mod+5 $workspace5
+bindsym $mod+6 $workspace6
+bindsym $mod+7 $workspace7
+bindsym $mod+8 $workspace8
+bindsym $mod+9 $workspace9
+bindsym $mod+0 $workspace0
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to $workspace1
+bindsym $mod+Shift+2 move container to $workspace2
+bindsym $mod+Shift+3 move container to $workspace3
+bindsym $mod+Shift+4 move container to $workspace4
+bindsym $mod+Shift+5 move container to $workspace5
+bindsym $mod+Shift+6 move container to $workspace6
+bindsym $mod+Shift+7 move container to $workspace7
+bindsym $mod+Shift+8 move container to $workspace8
+bindsym $mod+Shift+9 move container to $workspace9
+bindsym $mod+Shift+0 move container to $workspace0
+
+exec_always i3-autoname-workspaces &
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+bar {
+  colors {
+      background $color_normal_gray
+      separator  $color_bright_gray
+      statusline $color_bright_white
+
+      # Type             border                 background              font
+      focused_workspace  $color_bright_gray     $color_bright_gray      $color_bright_white
+      active_workspace   $color_unused          $color_unused           $color_unused
+      inactive_workspace $color_normal_gray     $color_normal_gray      $color_normal_white
+      urgent_workspace   $color_bright_yellow   $color_bright_yellow    $color_normal_black
+  }
+
+  separator_symbol "  |  "
+    status_command py3status -c ~/.config/py3status/config
+    position top
+    tray_output primary
+}
+
+bindsym $mod+r mode "resize"
+mode "resize" {
+        bindsym Left  resize shrink width  10 px or 10 ppt
+        bindsym Down  resize grow   height 10 px or 10 ppt
+        bindsym Up    resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow   width  10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+set $mode_power power
+bindsym $mod+Control+l mode "$mode_power"
+mode "$mode_power" {
+    bindsym l mode "default", exec --no-startup-id i3exit lock
+    bindsym e mode "default", exec --no-startup-id i3exit logout
+    bindsym s mode "default", exec --no-startup-id i3exit suspend
+    bindsym r mode "default", exec --no-startup-id i3exit reboot
+    bindsym p mode "default", exec --no-startup-id i3exit shutdown
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+exec_always --no-startup-id "pgrep -x redshift || (redshift &)"
+exec_always --no-startup-id ~/.dropbox-dist/dropboxd &
+exec_always --no-startup-id "pgrep -x copyq || (copy &)"
+exec_always --no-startip-id unclutter &
+
+set $color_normal_white  #a89984
+set $color_bright_white  #ebdbb2
+set $color_normal_gray   #222222
+set $color_bright_gray   #3c3836
+set $color_bright_yellow #d79921
+set $color_normal_black  #282828
+set $color_unused        #ff0000
+
+# Colors                  border                 background             text                   indicator       child_border
+client.focused            $color_bright_gray     $color_bright_gray     $color_bright_white    $color_unused   $color_normal_white
+client.focused_inactive   $color_bright_gray     $color_bright_gray     $color_bright_white    $color_unused   $color_normal_black
+client.unfocused          $color_normal_gray     $color_normal_gray     $color_normal_white    $color_unused   $color_normal_black
+client.urgent             $color_bright_yellow   $color_bright_yellow   $color_normal_black    $color_unused   $color_unused
+client.placeholder        $color_unused          $color_normal_black    $color_unused          $color_unused   $color_unused
