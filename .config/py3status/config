@@ -1,11 +1,11 @@
 # vi: ft=sh
 
 general {
-  colors = true
-  color_good = '#ebdbb2'
+  colors         = true
+  color_good     = '#ebdbb2'
   color_degraded = '#fabd2f'
-  color_bad = '#fb4934'
-  interval = 1
+  color_bad      = '#fb4934'
+  interval       = 1
 }
 
 order += "diskdata"
@@ -23,7 +23,7 @@ net_rate {
 }
 
 volume_status {
-  format = '󰀃 {percentage}%'
+  format = ' 󰀃  {icon} {percentage} % '
   format_muted = '󰀂  0%'
   thresholds = [(0, 'bad'), (1, 'good'), (101, 'degraded')]
   on_udev_sound = 'refresh'
