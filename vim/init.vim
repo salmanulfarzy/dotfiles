@@ -27,9 +27,10 @@ call dein#add('cskeeters/vim-smooth-scroll')            " Smooth scroll
 call dein#add('moll/vim-bbye')                          " Keep window when closing a buffer
 
 """" format code
-call dein#add('tpope/vim-sleuth')               " automatically detect tabs vs spaces
-call dein#add('sbdchd/neoformat')               " automatically format code
+call dein#add('tpope/vim-sleuth')              " automatically detect tabs vs spaces
+call dein#add('sbdchd/neoformat')              " automatically format code
 call dein#add('editorconfig/editorconfig-vim') " Follow editorconfig if available
+call dein#add('dhruvasagar/vim-table-mode')    " Quickly create markdown table
 
 """" Manipulate code
 call dein#add('tpope/vim-surround')                                   " Surround
@@ -84,7 +85,6 @@ syntax on
 let &fillchars="vert:|,fold: ,diff: "
 set cursorline                                                  " Spot the cursor easier
 set diffopt+=iwhite                                             " Ignore whitespace changes
-set expandtab                                                   " Use spaces by default, not tabs
 set formatoptions+=l                                            " Don't wrap long lines when editing them
 set formatoptions+=n                                            " Recognize numbered lists
 set formatoptions+=o                                            " Continue comment when pressing o or O
@@ -403,8 +403,10 @@ nmap <Leader>gu <Plug>GitGutterUndoHunk
 nmap <Leader>gp <Plug>GitGutterPreviewHunk
 
 """" Markdown composer
-let g:markdown_composer_open_browser = 0
-let g:markdown_composer_custom_css = ['https://cdn.rawgit.com/maximbaz/github-markdown-css/gh-pages/github-markdown.css']
+let g:markdown_composer_open_browser = 1
+
+"""" VIM Table Mode
+let g:table_mode_corner='|'
 
 """" UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
