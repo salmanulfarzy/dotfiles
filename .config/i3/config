@@ -56,10 +56,15 @@ bindsym $mod+Shift+Down       move down
 bindsym $mod+Shift+Up         move up
 bindsym $mod+Shift+Right      move right
 
-# Pulse Audio controls
 bindsym XF86AudioMute        exec py3-cmd click 1 volume_status
 bindsym XF86AudioRaiseVolume exec py3-cmd click 4 volume_status
 bindsym XF86AudioLowerVolume exec py3-cmd click 5 volume_status
+bindsym XF86AudioPlay        exec py3-cmd click 1 spotify
+
+bindsym XF86AudioMedia exec "pgrep -x spotify || (spotify &)"
+
+bindsym XF86HomePage exec firefox
+bindsym XF86Mail     exec evolution
 
 set $workspace1 workspace number 1
 set $workspace2 workspace number 2
