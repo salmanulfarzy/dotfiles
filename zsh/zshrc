@@ -23,7 +23,7 @@ SPACESHIP_TIME_SHOW=true
 SPACESHIP_PACKAGE_SYMBOL=''
 SPACESHIP_DIR_LOCK_SYMBOL=''
 
-SPACESHIP_PROMPT_ORDER=(user host dir git venv python node package docker kubecontext exec_time line_sep vi_mode jobs char)
+SPACESHIP_PROMPT_ORDER=(user host dir git venv python package exec_time line_sep jobs char)
 SPACESHIP_RPROMPT_ORDER=(time)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
