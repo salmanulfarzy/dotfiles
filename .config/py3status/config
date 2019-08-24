@@ -8,8 +8,9 @@ general {
   interval       = 1
 }
 
-order += "diskdata"
 order += "net_rate"
+order += "spotify"
+order += "diskdata"
 order += "volume_status"
 order += "external_script date"
 order += "clock"
@@ -27,6 +28,14 @@ volume_status {
   format_muted = '󰀂  0%'
   thresholds = [(0, 'bad'), (1, 'good'), (101, 'degraded')]
   on_udev_sound = 'refresh'
+}
+
+spotify {
+    format = '  {title}'
+    format_down = ''
+    button_play_pause = 1
+    button_next = 4
+    button_previous = 5
 }
 
 diskdata {
