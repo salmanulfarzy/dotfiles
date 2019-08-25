@@ -11,6 +11,8 @@ general {
 order += "net_rate"
 order += "spotify"
 order += "diskdata"
+order += "group ram"
+order += "group cpu"
 order += "volume_status"
 order += "external_script date"
 order += "clock"
@@ -21,6 +23,36 @@ net_rate {
   # thresholds = [(0, 'bad'), (100, 'degraded'), (300, 'good')]
   hide_if_zero = True
   unit 'KB/s'
+}
+
+group ram {
+  button_next = 1
+  button_prev = 0
+
+  sysdata {
+    cache_timeout = 1
+    thresholds = { 'mem': [(0, 'good'), (60, 'degraded'), (80, 'bad')] }
+    format = '[\?color=mem 󰀌   {mem_used_percent:.0f}%]'
+  }
+
+  conky {
+    format = '󰀌  {top_mem name 1} {top_mem mem 1}%'
+  }
+}
+
+group cpu {
+  button_next = 1
+  button_prev = 0
+
+  sysdata {
+    cache_timeout = 1
+    thresholds = { 'cpu': [(0, 'good'), (25, 'degraded'), (80, 'bad')] }
+    format = '[\?color=cpu 󰀐   {cpu_usage:.0f}%]'
+  }
+
+  conky {
+    format = '󰀐  {top name 1} {top cpu 1}%'
+  }
 }
 
 volume_status {
