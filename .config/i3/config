@@ -11,11 +11,10 @@ hide_edge_borders both
 set $mod Mod4
 floating_modifier $mod
 
-exec_always --no-startup-id "pgrep -x redshift || (redshift &)"
-exec_always --no-startup-id ~/.dropbox-dist/dropboxd &
-exec_always --no-startup-id "pgrep -x copyq || (copy &)"
-exec_always --no-startip-id unclutter &
+exec_always ~/.loca/bin/dropbox &
 exec_always i3-autoname-workspaces &
+exec_always "pgrep -x copyq || (copyq &)"
+exec_always "source ~/.fehbg"
 
 for_window    [class="^.*"]               border pixel 0
 for_window    [class=".*"]                sticky enable
