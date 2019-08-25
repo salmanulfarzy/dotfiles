@@ -28,6 +28,7 @@ for_window    [class="Rofi"]              floating enable
 for_window    [class="TorLauncher"]       floating enable
 
 for_window [class="Firefox"]     move container to $workspace1
+for_window [class="Thunar"]      move container to $workspace3
 for_window [class="Evolution"]   move container to $workspace3
 for_window [class="Telegram"]    move container to $workspace3
 for_window [class="qBittorrent"] move container to $workspace9
@@ -43,6 +44,7 @@ bindsym $mod+w layout toggle split
 
 bindsym $mod+Shift+q    kill
 bindsym $mod+Return     exec kitty
+bindsym $mod+e          exec thunar
 bindsym $mod+m          exec "flameshot gui"
 bindsym $mod+`          exec "copyq toggle"
 
