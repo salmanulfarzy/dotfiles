@@ -8,17 +8,18 @@ import sys
 import i3ipc
 
 WINDOW_ICONS = {
-    "navigator": "",
-    "thunar": "",
-    "kitty":   "󰀀",
-    "sublime_text": "",
-    "spotify": "",
-    "evolution": "",
-    "telegram": "",
-    "copyq":   "",
-    "rofi":    "󰀋",
-    "vlc":     "",
-    "peek":    "",
+    "navigator"     : "",
+    "thunar"        : "",
+    "kitty"         : "󰀀",
+    "sublime_text"  : "",
+    "sublime_merge" : "",
+    "spotify"       : "",
+    "evolution"     : "",
+    "telegram"      : "",
+    "copyq"         : "",
+    "rofi"          : "󰀋",
+    "vlc"           : "",
+    "peek"          : "",
 }
 
 DEFAULT_ICON = "󰀏"
