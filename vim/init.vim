@@ -403,7 +403,7 @@ nmap <Leader>gu <Plug>GitGutterUndoHunk
 nmap <Leader>gp <Plug>GitGutterPreviewHunk
 
 """" Markdown composer
-let g:markdown_composer_open_browser = 1
+let g:markdown_composer_open_browser = 0
 
 """" VIM Table Mode
 let g:table_mode_corner='|'
