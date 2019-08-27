@@ -56,7 +56,7 @@ bindsym $mod+q          kill
 bindsym $mod+Return     exec kitty
 bindsym $mod+e          exec thunar
 bindsym $mod+m          exec "flameshot gui"
-bindsym $mod+`          exec "copyq toggle"
+bindsym $mod+p          exec "copyq toggle"
 
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+a exec --no-startup-id rofi -normal-window -show drun
