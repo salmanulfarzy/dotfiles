@@ -161,6 +161,16 @@ mode "$mode_power" {
     bindsym Escape mode "default"
 }
 
+set $mode_sublime Sublime: [t]ext [m]erge
+bindsym Mod1+s mode "$mode_sublime"
+mode "$mode_sublime" {
+    bindsym t mode "default" exec subl
+    bindsym m mode "default" exec smerge
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
 set $color_normal_white  #a89984
 set $color_bright_white  #ebdbb2
 set $color_normal_gray   #222222
