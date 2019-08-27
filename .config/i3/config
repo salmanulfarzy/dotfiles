@@ -25,12 +25,15 @@ for_window    [class="Peek"]              floating enable
 for_window    [class="Rofi"]              floating enable
 for_window    [class="TorLauncher"]       floating enable
 
-for_window [class="Firefox"]     move container to $workspace1
-for_window [class="Thunar"]      move container to $workspace3
-for_window [class="Evolution"]   move container to $workspace3
-for_window [class="Telegram"]    move container to $workspace3
-for_window [class="qBittorrent"] move container to $workspace9
-for_window [class="Tor Browser"] move container to $workspace9
+# Automatically assign windows to workspaces
+assign     [class="Evolution"]   $workspace3
+assign     [class="Firefox"]     $workspace1
+assign     [class="Telegram"]    $workspace3
+assign     [class="qBittorrent"] $workspace9
+assign     [class="Tor"]         $workspace9
+
+# Spotify sets class hints only after mapping itself,
+# Using for_window since it has effect even after window is managed
 for_window [class="Spotify"]     move container to $workspace0
 
 bindsym $mod+minus       scratchpad show
