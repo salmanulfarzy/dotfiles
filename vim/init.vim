@@ -25,6 +25,7 @@ call dein#add('maximbaz/lightline-trailing-whitespace') " Trailing whitespace in
 call dein#add('gcavallanti/vim-noscrollbar')            " Scrollbar for statusline
 call dein#add('cskeeters/vim-smooth-scroll')            " Smooth scroll
 call dein#add('moll/vim-bbye')                          " Keep window when closing a buffer
+call dein#add('junegunn/goyo.vim')                     " Distrction free writing
 
 """" format code
 call dein#add('tpope/vim-sleuth')              " automatically detect tabs vs spaces
@@ -402,8 +403,11 @@ nmap <Leader>ga <Plug>GitGutterStageHunk
 nmap <Leader>gu <Plug>GitGutterUndoHunk
 nmap <Leader>gp <Plug>GitGutterPreviewHunk
 
+"""" Goyo
+nnoremap <silent> <Leader>g :Goyo<CR>
+
 """" Markdown composer
-let g:markdown_composer_open_browser = 0
+let g:markdown_composer_open_browser = 1
 
 """" VIM Table Mode
 let g:table_mode_corner='|'
