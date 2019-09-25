@@ -138,8 +138,8 @@ bar {
 
   separator_symbol "  |  "
     status_command py3status
-    position top
-    tray_output primary
+    position bottom
+    tray_output none
 }
 
 bindsym $mod+r mode "resize"
