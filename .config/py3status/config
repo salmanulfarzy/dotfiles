@@ -18,7 +18,7 @@ order += "external_script date"
 order += "clock"
 
 net_rate {
-  format = '\?color=down ↓ {down}'
+  format = '\?color=down {up} 🡑 🡓 {down}'
   format_value = '{value:.0f} {unit}'
   # thresholds = [(0, 'bad'), (100, 'degraded'), (300, 'good')]
   hide_if_zero = True
