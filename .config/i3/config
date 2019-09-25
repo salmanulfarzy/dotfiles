@@ -156,11 +156,11 @@ mode "resize" {
 set $mode_power Power: [l]ock [s]uspend [p]ower off [r]eboot lo[g]out
 bindsym $mod+Control+l mode "$mode_power"
 mode "$mode_power" {
-    bindsym l mode "default", exec --no-startup-id i3exit lock
-    bindsym g mode "default", exec --no-startup-id i3exit logout
-    bindsym s mode "default", exec --no-startup-id i3exit suspend
-    bindsym r mode "default", exec --no-startup-id i3exit reboot
-    bindsym p mode "default", exec --no-startup-id i3exit shutdown
+    bindsym l exec i3exit lock, mode "default"
+    bindsym g exec i3exit logout, mode "default"
+    bindsym s exec i3exit suspend, mode "default"
+    bindsym r exec i3exit reboot, mode "default"
+    bindsym p exec i3exit shutdown, mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
