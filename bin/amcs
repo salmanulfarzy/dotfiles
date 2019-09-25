@@ -9,6 +9,7 @@
   --conflict 'skip' \
   --log-file 'amc.log' \
   --def unsorted=y \
+  --def subtitles=en \
   --def clean=y \
   --def "seriesFormat={home}/Media/TV Shows/{n}/{'Season '+s} ({episodelist.findAll{it.season == s}.airdate.year[0,-1].unique().join('-')})/{n} - {s00e00} - {t}" \
   --def "movieFormat={home}/Media/Movies/{info.SpokenLanguages.displayLanguage[0]}/{n} ({y}) [{fn.findMatch('scr|hq') ? 'Scr, ' : {fn.findMatch('TV') ? 'TV, ' : null} }{genre }, {rating}, {vf}, {vc}]/ {fn}"
