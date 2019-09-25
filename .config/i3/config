@@ -16,6 +16,7 @@ exec_always ~/.loca/bin/dropbox &
 exec_always i3-autoname-workspaces &
 exec_always "pgrep -x copyq || (copyq &)"
 exec_always "source ~/.fehbg"
+exec_always ibus-daemon -d &
 
 for_window    [class=".*"]                sticky enable
 for_window    [window_role="pop-up"]      floating enable
@@ -57,6 +58,7 @@ bindsym $mod+Return     exec kitty
 bindsym $mod+e          exec thunar
 bindsym $mod+m          exec "flameshot gui"
 bindsym $mod+p          exec "copyq toggle"
+bindsym $mod+g         exec switch-ibus
 
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+a exec --no-startup-id rofi -normal-window -show drun

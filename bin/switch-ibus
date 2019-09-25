@@ -1,0 +1,8 @@
+#!/bin/sh
+
+CURRENT=$(ibus engine)
+if [ "$CURRENT" = "xkb:us::eng" ]; then
+  ibus engine m17n:ml:swanalekha
+else
+  ibus engine xkb:us::eng
+fi
