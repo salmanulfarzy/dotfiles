@@ -31,11 +31,7 @@ for_window    [class="Rofi"]              floating enable
 for_window    [class="TorLauncher"]       floating enable
 
 # Automatically assign windows to workspaces
-assign     [class="Evolution"]   $workspace3
-assign     [class="Firefox"]     $workspace1
-assign     [class="Telegram"]    $workspace3
-assign     [class="qBittorrent"] $workspace9
-assign     [class="Tor"]         $workspace9
+assign     [class="Thunderbird"]   $workspace3
 
 # Spotify sets class hints only after mapping itself,
 # Using for_window since it has effect even after window is managed
@@ -58,7 +54,7 @@ bindsym $mod+Shift+s focus child
 
 bindsym $mod+q          kill
 bindsym $mod+Return     exec kitty
-bindsym $mod+e          exec thunar
+bindsym $mod+e          exec nautilus
 bindsym $mod+m          exec "flameshot gui"
 bindsym $mod+p          exec "copyq toggle"
 bindsym $mod+g         exec switch-ibus
@@ -88,7 +84,7 @@ bindsym XF86AudioPlay        exec py3-cmd click 1 spotify
 bindsym XF86AudioMedia exec "pgrep -x spotify || (spotify &)"
 
 bindsym XF86HomePage exec firefox
-bindsym XF86Mail     exec evolution
+bindsym XF86Mail     exec thunderbird
 
 set $workspace1 workspace number 1
 set $workspace2 workspace number 2
