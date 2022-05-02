@@ -30,6 +30,7 @@ for_window    [class="flameshot"]         floating enable
 for_window    [class="Peek"]              floating enable
 for_window    [class="Rofi"]              floating enable
 for_window    [class="TorLauncher"]       floating enable
+for_window    [class="Ibus-ui-gtk3"]      floating enable
 
 # Automatically assign windows to workspaces
 assign     [class="Thunderbird"]   $workspace3
@@ -60,7 +61,8 @@ bindsym $mod+Return     exec kitty
 bindsym $mod+e          exec nautilus
 bindsym $mod+m          exec "flameshot gui"
 bindsym $mod+p          exec "copyq toggle"
-bindsym $mod+g         exec switch-ibus
+bindsym $mod+g         exec ibus-ml
+bindsym $mod+Shift+g         exec ibus-emoji
 
 bindsym $mod+d exec --no-startup-id rofi -show run -display-run "" -theme gruvbox-dark
 bindsym $mod+a exec --no-startup-id rofi -show drun -display-drun "" -show-icons -theme gruvbox-dark
