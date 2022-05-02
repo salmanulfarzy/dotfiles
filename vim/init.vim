@@ -21,7 +21,6 @@ call dein#add('haya14busa/dein-command.vim')
 call dein#add('chriskempson/base16-vim')                " Color theme
 call dein#add('itchyny/lightline.vim')                  " Bottom bar
 call dein#add('mgee/lightline-bufferline')              " Top bar
-call dein#add('maximbaz/lightline-trailing-whitespace') " Trailing whitespace indicator
 call dein#add('gcavallanti/vim-noscrollbar')            " Scrollbar for statusline
 call dein#add('cskeeters/vim-smooth-scroll')            " Smooth scroll
 call dein#add('moll/vim-bbye')                          " Keep window when closing a buffer
@@ -41,10 +40,6 @@ call dein#add('junegunn/vim-easy-align')                              " Easy ali
 call dein#add('alvan/vim-closetag')                                   " Automatically put closing tag in XML
 call dein#add('matze/vim-move')                                       " Move blocks of code
 
-"""" Snippets
-call dein#add('SirVer/ultisnips')                                     " Snippet engine
-call dein#add('honza/vim-snippets')                                   " List of snippets
-
 """" Navigate files, buffers and panes
 call dein#add('airblade/vim-rooter')                                  " Change working directory to the project root
 call dein#add('scrooloose/nerdtree')
@@ -54,10 +49,6 @@ call dein#add('benizi/vim-automkdir')                                 " Automati
 
 """" Autocomplete
 call dein#add('Shougo/deoplete.nvim')                                 " Autocomplete engine
-call dein#add('Shougo/neco-vim')                                      " Vim
-call dein#add('zchee/deoplete-jedi')                                  " Python
-call dein#add('carlitux/deoplete-ternjs')                             " Javascript
-call dein#add('zchee/deoplete-zsh')                                   " ZSH
 
 """" Git
 call dein#add('tpope/vim-fugitive')                                   " Git integration
@@ -66,11 +57,7 @@ call dein#add('airblade/vim-gitgutter')                               " Git gutt
 """" Render code
 call dein#add('sheerun/vim-polyglot')                                 " Many many syntaxes
 call dein#add('ap/vim-css-color')                                     " Colors in CSS
-call dein#add('euclio/vim-markdown-composer',
-      \ {'build': 'cargo build --release'})                           " Instantly preview markdown
-
-"""" Lint code
-call dein#add('w0rp/ale')
+      \ {'build': 'cargo build --release'}                           " Instantly preview markdown
 
 """" Dein-end
 call dein#end()
@@ -97,8 +84,8 @@ set history=32
 set ignorecase                                                  " Ignore search case
 set lazyredraw                                                  " Don't redraw when there is no need for it
 set linebreak                                                   " Wrap lines intelligently, e.g. by end of words
-set list                                                        " Display unusual whitespace characters
-set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨ " Which whitespace characters to display and how
+" set list                                                        " Display unusual whitespace characters
+" set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨ " Which whitespace characters to display and how
 set showbreak=↪\                                                " Highlight beginning of wrpped lines
 set mouse=a                                                     " Enable mouse support
 set noshowmode                                                  " Don't show current mode in echo
@@ -125,8 +112,6 @@ set tabstop=2
 set title                                                       " Change terminal title based on the file name
 set updatetime=100
 set virtualedit=all
-
-
 
 set wildmenu                        " Enhanced mode for command line completion
 set wildmode=longest,list,full
@@ -349,33 +334,12 @@ endfunction
   let g:lightline#bufferline#unnamed = '[No Name]'      " Default name when no buffer is opened
   let g:lightline#bufferline#shorten_path = 0           " Don't compress ~/my/folder/name to ~/m/f/n
 
-"""" Lightline trailing whitespace
-let g:lightline#trailing_whitespace#indicator = '•'
-
 """" DelimitMate
 let delimitMate_expand_cr = 2
 let delimitMate_expand_space = 1
 let delimitMate_nesting_quotes = ['"', '`']
 let delimitMate_excluded_regions = ""
 let delimitMate_balance_matchpairs = 1
-
-"""" Deoplete
-let g:deoplete#enable_at_startup = 1
-
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><s-TAB> pumvisible() ? "\<c-p>" : "\<s-TAB>"
-
-call deoplete#custom#source('_', 'min_pattern_length', 1)
-call deoplete#custom#source('around', 'rank', 100)
-call deoplete#custom#source('ultisnips', 'rank', 200)
-
-"""" Deoplete-jedi (Python completion)
-let deoplete#sources#jedi#show_docstring = 1
-
-"""" Deoplete-ternjs (JS completion)
-let g:tern_request_timeout = 1
-let g:tern#command = ["tern"]
-let g:tern#arguments = ["--persistent"]
 
 """" EasyAlign
 nmap <Leader>= <Plug>(EasyAlign)
@@ -406,24 +370,11 @@ nmap <Leader>gp <Plug>GitGutterPreviewHunk
 """" Goyo
 nnoremap <silent> <Leader>g :Goyo<CR>
 
-"""" Markdown composer
-let g:markdown_composer_open_browser = 1
-
 """" VIM Table Mode
 let g:table_mode_corner='|'
 
-"""" UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
-
-augroup fix-ultisnips-overriding-tab-visual-mode
-  autocmd!
-  autocmd VimEnter * xnoremap <Tab> >gv
-augroup END
 
 """" vim-rooter
-let g:rooter_use_lcd = 1
 let g:rooter_silent_chdir = 1
 let g:rooter_resolve_links = 1
 
@@ -497,7 +448,3 @@ augroup END
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
-
-"" vim:foldmethod=expr:foldlevel=0
-"" vim:foldexpr=getline(v\:lnum)=~'^""'?'>'.(matchend(getline(v\:lnum),'""*')-2)\:'='IP
