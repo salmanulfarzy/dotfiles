@@ -11,11 +11,13 @@ general {
 order += "net_rate"
 order += "spotify"
 order += "diskdata"
+order += "scratchpad_async"
 order += "group ram"
 order += "group cpu"
 order += "volume_status"
 order += "external_script date"
 order += "clock"
+order += "do_not_disturb"
 
 net_rate {
   format = '\?color=down {up} 🡑 🡓 {down}'
@@ -78,18 +80,20 @@ diskdata {
 external_script date {
   cache_timeout = 60
   script_path = 'date +"%a, %d %b"'
-  format = '󰀛    {output}'
-  on_click 1 = 'exec gsimplecal'
+  format = '󰀛   {output}'
 }
 
 clock {
   format = '{Asia/Kolkata}'
-  format_time = '%H:%M:%S   '
+  format_time = '%H:%M:%S'
 }
 
 external_script date {
   cache_timeout = 60
   script_path = 'date +"%a, %d %b"'
   format = '󰀛    {output}'
-  on_click 1 = 'exec gsimplecal'
+}
+
+do_not_disturb {
+	format = '[\?if=state&color=bad DND|\?color=good DND]'
 }
