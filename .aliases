@@ -1,13 +1,57 @@
 # Quick edit `rc` files
 alias zshrc="vim ~/.zshrc"
-alias vimrc="vim ~/.vim/vimrc"
+alias vimrc="vim ~/.config/nvim/init.vim"
 
-# Easier directory navigation
+
+command -v bat &> /dev/null && alias c='bat -p'                                         || alias c='cat'
+command -v ranger &> /dev/null && alias r='ranger'
+command -v fd  &> /dev/null && alias fd='fd --hidden --follow'                          || alias fd='find . -name'
+command -v rg  &> /dev/null && alias rg='rg --hidden --follow --smart-case 2>/dev/null' || alias rg='grep --color=auto --exclude-dir=.git -R'
+command -v exa &> /dev/null && alias ls='exa --group --git --group-directories-first'   || alias ls='ls --color=auto --group-directories-first -h'
+command -v exa &> /dev/null && alias la='ll -a'                                         || alias la='ll -A'
+command -v exa &> /dev/null && alias lk='ll -s=size'                                    || alias lk='ll -r --sort=size'
+command -v exa &> /dev/null && alias lm='ll -s=modified'                                || alias lm='ll -r --sort=time'
+command -v kitty &> /dev/null && alias ssh='kitty +kitten ssh'
+command -v zoxide &> /dev/null && alias cd='z'
+
+command -v aria2c &> /dev/null && alias a2c='aria2c'
+command -v youtube-dl &> /dev/null && alias y='youtube-dl'
+
 alias ~="cd ~"
 alias -- -="cd -"
-
+alias e="$EDITOR"
+alias d='dig +nocmd +nomultiline +noall +answer'
+alias cp='cp -r --reflink=auto'
+alias mkdir='mkdir -p'
+alias http-serve='python -m http.server'
+alias locate='locate -i'
+alias o='xdg-open'
+alias rm!='\rm -rf'
+alias tree='tree -a -I .git --dirsfirst'
+alias ll='ls -l'
 alias sub="filebot -get-subtitles"
-alias rg="rg --type-add 'web:*{html,css,js}' --smart-case --follow"
 alias reload="exec $SHELL -l"
+alias tlmgr="/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode"
+
+function md() { [[ $# == 1 ]] && mkdir -p -- "$1" && cd -- "$1" }
+compdef _directories md
+
+p() { ping "${1:-1.1.1.1}" }
+tmpd() { cd "$(mktemp -d -t "${1:-tmp}.XXXXXXXXXX")" }
+
+alias dc='docker-compose'
+alias dcu='dc up -d'
+alias dcd='dc down'
+alias dcs='dc ps'
+alias dcl='dc logs -f --tail=1000'
+alias dce='dc exec'
 
 eval "$(hub alias -s)"
+
+alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
+alias ua-reset-mirror='export TMPFILE="$(mktemp)"; \
+    sudo true; \
+    rate-mirrors --save=$TMPFILE arch --max-delay=21600 \
+      && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
+      && sudo mv $TMPFILE /etc/pacman.d/mirrorlist \
+      && ua-drop-caches'
