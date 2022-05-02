@@ -1,42 +1,34 @@
-#
-# Defines environment variables.
-#
+#!/usr/bin/env zsh
 
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
+if [ -n "${ZSH_VERSION-}" ]; then
+    : ${ZDOTDIR:=~}
+    setopt no_global_rcs
+    if [[ -o no_interactive && -z "${Z4H_BOOTSTRAPPING-}" ]]; then
+        return
+    fi
+    setopt no_rcs
+    unset Z4H_BOOTSTRAPPING
 fi
 
-export PAGER='less'
-export EDITOR='vim'
-export VISUAL='vim'
+Z4H_URL="https://raw.githubusercontent.com/romkatv/zsh4humans/v3"
+: "${Z4H:=${XDG_CACHE_HOME:-$HOME/.cache}/zsh4humans}"
 
-export LANG='en_US.UTF-8'
-export LC_ALL='en_US.UTF-8'
+umask o-w
 
-# Ensure path arrays do not contain duplicates.
-typeset -gU cdpath fpath mailpath path
-
-fpath=(
-  $fpath
-  $HOME/.zfunctions
-)
-
-# Set the list of directories that Zsh searches for programs.
-path=(
-  /usr/local/{bin,sbin}
-  $path
-  $HOME/.local/bin
-  $HOME/.cargo/bin
-  $HOME/go/bin
-  $HOME/.pyenv/bin
-  $HOME/.yarn/bin
-)
-
-# Set the default Less options.
-export LESS='-g -i -M -R -w -z-4'
-
-# Set the Less input preprocessor.
-# Try both `lesspipe` and `lesspipe.sh` as either might exist on a system.
-if (( $#commands[(i)lesspipe(|.sh)] )); then
-  export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
+if [ ! -e "$Z4H"/z4h.zsh ]; then
+    mkdir -p -- "$Z4H" || return
+    printf >&2 '\033[33mz4h\033[0m: fetching \033[4mz4h.zsh\033[0m\n'
+    if command -v curl > /dev/null 2>&1; then
+        curl -fsSL -- "$Z4H_URL"/z4h.zsh > "$Z4H"/z4h.zsh.$$ || return
+    elif command -v wget > /dev/null 2>&1; then
+        wget -O- -- "$Z4H_URL"/z4h.zsh > "$Z4H"/z4h.zsh.$$ || return
+    else
+        printf >&2 '\033[33mz4h\033[0m: please install \033[32mcurl\033[0m or \033[32mwget\033[0m\n'
+        return 1
+    fi
+    mv -- "$Z4H"/z4h.zsh.$$ "$Z4H"/z4h.zsh || return
 fi
+
+. "$Z4H"/z4h.zsh || return
+
+setopt rcs
