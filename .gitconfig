@@ -22,6 +22,7 @@
   signingkey = 7325421E81414002
   signingkey = 83CE707DA1CDC9D2
   signingkey = 6C326B61B424A736
+	signingkey = 7D2F0E65A9330E8D
 [push]
   default = simple
 [status]
