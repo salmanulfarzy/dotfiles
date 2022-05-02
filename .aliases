@@ -6,6 +6,7 @@ alias vimrc="vim ~/.vim/vimrc"
 alias ~="cd ~"
 alias -- -="cd -"
 
+alias r="ranger"
 alias sub="filebot -get-subtitles"
 alias rg="rg --type-add 'web:*{html,css,js}' --smart-case --follow"
 alias reload="exec $SHELL -l"
