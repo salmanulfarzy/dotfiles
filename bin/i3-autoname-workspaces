@@ -9,11 +9,12 @@ import i3ipc
 
 WINDOW_ICONS = {
     "navigator"     : "",
-    "thunar"        : "",
+    "nautilus"      : "",
     "kitty"         : "󰀀",
     "sublime_text"  : "",
     "sublime_merge" : "",
     "spotify"       : "",
+    "thunderbird"   : "",
     "evolution"     : "",
     "telegram"      : "",
     "copyq"         : "",
