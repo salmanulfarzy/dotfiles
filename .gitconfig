@@ -2,15 +2,19 @@
   s    = status -sb
   cmt  = commit -v
   cmsg = commit -m
+  cane = commit --amend --no-edit
 
   pl = pull --rebase
   p  = rebase -i @{u}
 
+  bt = branch
   co = checkout
   dc = diff --cached
   cp = cherry-pick
   ap = add -p
 
+  last    = log -1 HEAD
+  lo      = log --oneline -n 10
   dog     = log --decorate --oneline --graph
   adog    = log --all --decorate --oneline --graph
   filelog = log -u
