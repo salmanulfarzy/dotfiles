@@ -10,11 +10,8 @@ general {
 
 order += "net_rate"
 order += "spotify"
-order += "diskdata"
-order += "group ram"
-order += "group cpu"
-order += "volume_status"
-order += "external_script date"
+order += "battery_level"
+order += "do_not_disturb"
 order += "clock"
 
 net_rate {
@@ -23,6 +20,10 @@ net_rate {
   # thresholds = [(0, 'bad'), (100, 'degraded'), (300, 'good')]
   hide_if_zero = True
   unit 'KB/s'
+}
+
+battery_level {
+  format = '{icon} {percent}'
 }
 
 group ram {
@@ -63,7 +64,7 @@ volume_status {
 }
 
 spotify {
-    format = '  {title}'
+    format = '{title}'
     format_down = ''
     button_play_pause = 1
     button_next = 4
@@ -93,3 +94,8 @@ external_script date {
   format = '󰀛    {output}'
   on_click 1 = 'exec gsimplecal'
 }
+
+do_not_disturb {
+    format = '[\?color=state [\?if=state  ON|OFF]]'
+}
+
