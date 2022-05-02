@@ -41,10 +41,6 @@ call dein#add('junegunn/vim-easy-align')                              " Easy ali
 call dein#add('alvan/vim-closetag')                                   " Automatically put closing tag in XML
 call dein#add('matze/vim-move')                                       " Move blocks of code
 
-"""" Snippets
-call dein#add('SirVer/ultisnips')                                     " Snippet engine
-call dein#add('honza/vim-snippets')                                   " List of snippets
-
 """" Navigate files, buffers and panes
 call dein#add('airblade/vim-rooter')                                  " Change working directory to the project root
 call dein#add('scrooloose/nerdtree')
@@ -52,15 +48,7 @@ call dein#add('junegunn/fzf', {'build': './install --bin'})           " Fuzzy se
 call dein#add('junegunn/fzf.vim')                                     " Fuzzy search - vim plugin
 call dein#add('benizi/vim-automkdir')                                 " Automatically create missing folders on save
 
-"""" Autocomplete
-call dein#add('Shougo/deoplete.nvim')                                 " Autocomplete engine
-call dein#add('Shougo/neco-vim')                                      " Vim
-call dein#add('zchee/deoplete-jedi')                                  " Python
-call dein#add('carlitux/deoplete-ternjs')                             " Javascript
-call dein#add('zchee/deoplete-zsh')                                   " ZSH
-
 """" Git
-call dein#add('tpope/vim-fugitive')                                   " Git integration
 call dein#add('airblade/vim-gitgutter')                               " Git gutter
 
 """" Render code
@@ -68,9 +56,6 @@ call dein#add('sheerun/vim-polyglot')                                 " Many man
 call dein#add('ap/vim-css-color')                                     " Colors in CSS
 call dein#add('euclio/vim-markdown-composer',
       \ {'build': 'cargo build --release'})                           " Instantly preview markdown
-
-"""" Lint code
-call dein#add('w0rp/ale')
 
 """" Dein-end
 call dein#end()
@@ -98,7 +83,8 @@ set ignorecase                                                  " Ignore search 
 set lazyredraw                                                  " Don't redraw when there is no need for it
 set linebreak                                                   " Wrap lines intelligently, e.g. by end of words
 set list                                                        " Display unusual whitespace characters
-set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨ " Which whitespace characters to display and how
+set listchars=tab:→\ ,nbsp:␣" 
+" set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨ " Which whitespace characters to display and how
 set showbreak=↪\                                                " Highlight beginning of wrpped lines
 set mouse=a                                                     " Enable mouse support
 set noshowmode                                                  " Don't show current mode in echo
@@ -359,24 +345,6 @@ let delimitMate_nesting_quotes = ['"', '`']
 let delimitMate_excluded_regions = ""
 let delimitMate_balance_matchpairs = 1
 
-"""" Deoplete
-let g:deoplete#enable_at_startup = 1
-
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><s-TAB> pumvisible() ? "\<c-p>" : "\<s-TAB>"
-
-call deoplete#custom#source('_', 'min_pattern_length', 1)
-call deoplete#custom#source('around', 'rank', 100)
-call deoplete#custom#source('ultisnips', 'rank', 200)
-
-"""" Deoplete-jedi (Python completion)
-let deoplete#sources#jedi#show_docstring = 1
-
-"""" Deoplete-ternjs (JS completion)
-let g:tern_request_timeout = 1
-let g:tern#command = ["tern"]
-let g:tern#arguments = ["--persistent"]
-
 """" EasyAlign
 nmap <Leader>= <Plug>(EasyAlign)
 xmap <Leader>= <Plug>(EasyAlign)
@@ -394,28 +362,11 @@ nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>F :Files ~<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 
-"""" GitGutter
-let g:gitgutter_map_keys = 0
-
-nmap ]c <Plug>GitGutterNextHunk<Plug>GitGutterPreviewHunk<Bar>zv
-nmap [c <Plug>GitGutterPrevHunk<Plug>GitGutterPreviewHunk<Bar>zv
-nmap <Leader>ga <Plug>GitGutterStageHunk
-nmap <Leader>gu <Plug>GitGutterUndoHunk
-nmap <Leader>gp <Plug>GitGutterPreviewHunk
-
 """" Goyo
 nnoremap <silent> <Leader>g :Goyo<CR>
 
-"""" Markdown composer
-let g:markdown_composer_open_browser = 1
-
 """" VIM Table Mode
 let g:table_mode_corner='|'
-
-"""" UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 augroup fix-ultisnips-overriding-tab-visual-mode
   autocmd!
@@ -423,7 +374,6 @@ augroup fix-ultisnips-overriding-tab-visual-mode
 augroup END
 
 """" vim-rooter
-let g:rooter_use_lcd = 1
 let g:rooter_silent_chdir = 1
 let g:rooter_resolve_links = 1
 
@@ -500,4 +450,3 @@ endif
 
 
 "" vim:foldmethod=expr:foldlevel=0
-"" vim:foldexpr=getline(v\:lnum)=~'^""'?'>'.(matchend(getline(v\:lnum),'""*')-2)\:'='IP
